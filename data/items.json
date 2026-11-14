@@ -4,15 +4,23 @@
   "q": 3,
   "lines": [
    {
-    "t": "Two-Hand · Sword",
+    "t": "Item Level 33",
     "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Sword",
+    "c": "q1"
    },
    {
     "t": "64 - 97 Damage · Speed 2.90",
     "c": null
    },
    {
-    "t": "(27.8 damage per second)",
+    "t": "(27.76 damage per second)",
     "c": null
    },
    {
@@ -22,49 +30,76 @@
    {
     "t": "+15 Spirit",
     "c": null
+   },
+   {
+    "t": "Requires Level 28",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Клеймор комбатанта"
  },
  "3732": {
   "en": "Hooded Cowl",
   "q": 1,
   "lines": [
    {
-    "t": "Head · Cloth",
+    "t": "Item Level 30",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Cloth",
+    "c": "q1"
    },
    {
     "t": "33 Armor",
     "c": null
    }
-  ]
+  ],
+  "ru": "Клобук с капюшоном"
  },
  "3751": {
   "en": "Mercenary Leggings",
   "q": 2,
   "lines": [
    {
-    "t": "Legs",
+    "t": "Item Level 30",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Mail",
+    "c": "q1"
    },
    {
     "t": "173 Armor",
     "c": null
    },
    {
-    "t": "+7 Agility",
+    "t": "+7 Strength",
     "c": null
    },
    {
-    "t": "+7 Strength",
+    "t": "+7 Agility",
     "c": null
    }
-  ]
+  ],
+  "ru": "Поножи наемника"
  },
  "4643": {
   "en": "Grimsteel Cape",
   "q": 2,
   "lines": [
+   {
+    "t": "Item Level 35",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
@@ -84,24 +119,25 @@
    {
     "t": "+7 Stamina",
     "c": null
-   },
-   {
-    "t": "Item Level 35",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Grimsteel Cape]"
  },
  "4724": {
   "en": "Humbert's Helm",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 30",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Head · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "76 Armor",
@@ -120,22 +156,35 @@
     "c": null
    },
    {
-    "t": "Item Level 30",
+    "t": "Dropped by: Dun Garok Rifleman",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 3.94%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Шлем Гумберта"
  },
  "6321": {
   "en": "Silverlaine's Family Seal",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 26",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
-    "t": "Finger",
+    "t": "Unique-Equipped",
     "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
    },
    {
     "t": "+5 Strength",
@@ -146,51 +195,69 @@
     "c": null
    },
    {
-    "t": "Equip: Increases movement speed by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 21",
     "c": null
    },
    {
-    "t": "Item Level 26",
+    "t": "Equip: Increases movement speed by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Baron Silverlaine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.62%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Фамильная печать Сильверлейнов"
  },
  "6414": {
   "en": "Seal of Sylvanas",
   "q": 3,
   "lines": [
    {
-    "t": "Finger",
+    "t": "Item Level 29",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
    },
    {
     "t": "+8 Stamina",
     "c": null
    },
    {
-    "t": "+6 Attack Power",
-    "c": null
+    "t": "Equip: +6 Attack Power.",
+    "c": "q2"
    }
-  ]
+  ],
+  "ru": "Печать Сильваны"
  },
  "6480": {
   "en": "Slick Deviate Leggings",
-  "q": 3,
+  "q": 2,
   "lines": [
+   {
+    "t": "Item Level 20",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Legs · Leather",
-    "c": null
+    "c": "q1"
    },
    {
-    "t": "75 Armor",
+    "t": "68 Armor",
     "c": null
    },
    {
@@ -198,26 +265,27 @@
     "c": null
    },
    {
-    "t": "+7 Stamina",
-    "c": null
-   },
-   {
-    "t": "+5 Spirit",
-    "c": null
-   },
-   {
-    "t": "Item Level 20",
+    "t": "+4 Stamina",
     "c": null
    }
-  ]
+  ],
+  "ru": "Поножи из искаженной чешуи"
  },
  "6627": {
   "en": "Mutant Scale Breastplate",
   "q": 3,
   "lines": [
    {
-    "t": "Chest · Mail",
+    "t": "Item Level 23",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": "q1"
    },
    {
     "t": "194 Armor",
@@ -230,13 +298,34 @@
    {
     "t": "+4 Stamina",
     "c": null
+   },
+   {
+    "t": "Requires Level 18",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Mutanus the Devourer",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 28.97%",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Кираса из чешуи мутанта"
  },
  "6629": {
   "en": "Sporid Cape",
   "q": 3,
   "lines": [
+   {
+    "t": "Item Level 22",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
    {
     "t": "Back",
     "c": null
@@ -250,22 +339,39 @@
     "c": null
    },
    {
+    "t": "Requires Level 17",
+    "c": null
+   },
+   {
     "t": "Equip: When struck in combat, inflicts 1 Nature damage to the attacker.",
     "c": "q2"
+   },
+   {
+    "t": "Dropped by: Verdan the Everliving",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.54%",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Накидка Спорид"
  },
  "6686": {
   "en": "Tusken Helm",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Head · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "188 Armor",
@@ -284,22 +390,31 @@
     "c": null
    },
    {
-    "t": "Item Level 34",
+    "t": "Dropped by: Overlord Ramtusk",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 29.93%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Шлем Бивня"
  },
  "6687": {
   "en": "Corpsemaker",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Axe",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "88 - 132 Damage · Speed 3.80",
@@ -322,22 +437,35 @@
     "c": null
    },
    {
-    "t": "Item Level 34",
+    "t": "Dropped by: Overlord Ramtusk",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 33.95%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Труподел"
  },
  "6692": {
   "en": "Pronged Reaver",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
-    "t": "One-Hand · Axe",
+    "t": "Unique-Equipped",
     "c": null
+   },
+   {
+    "t": "One-Hand · Axe",
+    "c": "q1"
    },
    {
     "t": "38 - 72 Damage · Speed 2.40",
@@ -360,18 +488,31 @@
     "c": null
    },
    {
-    "t": "Item Level 35",
+    "t": "Dropped by: Charlga Razorflank",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 30.72%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Pronged Reaver]"
  },
  "6694": {
   "en": "Heart of Agamaggan",
-  "q": null,
+  "q": 3,
   "lines": [
    {
-    "t": "Off Hand · Shield",
+    "t": "Item Level 35",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Off Hand · Shield",
+    "c": "q1"
    },
    {
     "t": "757 Armor",
@@ -388,20 +529,37 @@
    {
     "t": "Requires Level 30",
     "c": null
+   },
+   {
+    "t": "Equip: Increases healing done by up to 15 and damage done by up to 5 for all magical spells and effects.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Charlga Razorflank",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 29.55%",
+    "c": null
    }
-  ]
+  ],
+  "ru": "[Heart of Agamaggan]"
  },
  "6748": {
   "en": "Monkey Ring",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Finger",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "+5 Agility",
@@ -410,24 +568,25 @@
    {
     "t": "+5 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 32",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Monkey Ring]"
  },
  "6749": {
   "en": "Tiger Band",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Finger",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "+5 Strength",
@@ -436,46 +595,52 @@
    {
     "t": "+5 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 32",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Tiger Band]"
  },
  "6750": {
   "en": "Snake Hoop",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Finger",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "+5 Intellect",
     "c": null
    },
    {
-    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 6.",
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 6 .",
     "c": "q2"
-   },
-   {
-    "t": "Item Level 32",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Snake Hoop]"
  },
  "6906": {
   "en": "Algae Fists",
   "q": 3,
   "lines": [
    {
-    "t": "Hands · Mail",
+    "t": "Item Level 28",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Hands · Mail",
+    "c": "q1"
    },
    {
     "t": "132 Armor",
@@ -492,20 +657,37 @@
    {
     "t": "+5 Nature Resistance",
     "c": null
+   },
+   {
+    "t": "Requires Level 23",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Gelihast",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.09%",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Водрослевые боевые перчатки"
  },
  "7683": {
   "en": "Bloody Brass Knuckles",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "One-Hand · Fist Weapon",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "24 - 46 Damage · Speed 1.60",
@@ -513,6 +695,10 @@
    },
    {
     "t": "(21.88 damage per second)",
+    "c": null
+   },
+   {
+    "t": "Requires Level 29",
     "c": null
    },
    {
@@ -524,26 +710,31 @@
     "c": "q2"
    },
    {
-    "t": "Requires Level 29",
+    "t": "Dropped by: Interrogator Vishas",
     "c": null
    },
    {
-    "t": "Item Level 34",
+    "t": "Drop Chance: 29.79%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Окровавленный латунный кастет"
  },
  "7688": {
   "en": "Ironspine's Ribcage",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Chest · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "235 Armor",
@@ -566,22 +757,31 @@
     "c": null
    },
    {
-    "t": "Item Level 35",
+    "t": "Dropped by: Ironspine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 40.17%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Ironspine's Ribcage]"
  },
  "7689": {
   "en": "Morbid Dawn",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Sword",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "70 - 105 Damage · Speed 2.90",
@@ -604,25 +804,38 @@
     "c": null
    },
    {
-    "t": "Item Level 35",
+    "t": "Dropped by: Fallen Champion",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.34%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Morbid Dawn]"
  },
  "7731": {
   "en": "Ghostshard Talisman",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Neck",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "+9 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
     "c": null
    },
    {
@@ -634,26 +847,31 @@
     "c": "q2"
    },
    {
-    "t": "Requires Level 30",
+    "t": "Dropped by: Azshir the Sleepless",
     "c": null
    },
    {
-    "t": "Item Level 35",
+    "t": "Drop Chance: 34.34%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Ghostshard Talisman]"
  },
  "7751": {
   "en": "Vorrel's Boots",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Feet · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "70 Armor",
@@ -670,24 +888,25 @@
    {
     "t": "+7 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 35",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Vorrel's Boots]"
  },
  "10328": {
   "en": "Scarlet Chestpiece",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 39",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Chest · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "250 Armor",
@@ -706,22 +925,75 @@
     "c": null
    },
    {
-    "t": "Item Level 39",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Scarlet Champion",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 0.30%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Chestpiece]"
  },
  "10329": {
   "en": "Scarlet Belt",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 37",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Waist · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "136 Armor",
@@ -740,22 +1012,67 @@
     "c": null
    },
    {
-    "t": "Item Level 37",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Belt]"
  },
  "10330": {
   "en": "Scarlet Leggings",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 44",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Legs · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "236 Armor",
@@ -774,22 +1091,67 @@
     "c": null
    },
    {
-    "t": "Item Level 44",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Leggings]"
  },
  "10331": {
   "en": "Scarlet Gauntlets",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 38",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Hands · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "153 Armor",
@@ -808,22 +1170,75 @@
     "c": null
    },
    {
-    "t": "Item Level 38",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Scarlet Centurion",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 4.74%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Gauntlets]"
  },
  "10332": {
   "en": "Scarlet Boots",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Feet · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "161 Armor",
@@ -842,22 +1257,67 @@
     "c": null
    },
    {
-    "t": "Item Level 35",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Boots]"
  },
  "10333": {
   "en": "Scarlet Wristguards",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 36",
+    "c": null
+   },
+   {
     "t": "Binds when equipped",
     "c": null
    },
    {
     "t": "Wrist · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "104 Armor",
@@ -872,22 +1332,67 @@
     "c": null
    },
    {
-    "t": "Item Level 36",
+    "t": "Chain of the Scarlet Crusade (0/6) Scarlet Belt",
+    "c": "q"
+   },
+   {
+    "t": "Scarlet Boots",
+    "c": null
+   },
+   {
+    "t": "Scarlet Chestpiece",
+    "c": null
+   },
+   {
+    "t": "Scarlet Gauntlets",
+    "c": null
+   },
+   {
+    "t": "Scarlet Leggings",
+    "c": null
+   },
+   {
+    "t": "Scarlet Wristguards",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Shadow Resistance.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +30 Attack Power against Undead.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead. (Proc chance: 15%, 15s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Improves your chance to hit by 1.0%.",
+    "c": null
+   },
+   {
+    "t": "(6) Set : Taking damage while at or below 20% health grants you a shield, absorbing 480 damage for 10 sec. This effect can only trigger once every 4 min. (4m cooldown)",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Scarlet Wristguards]"
  },
  "10412": {
   "en": "Belt of the Fang",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 21",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Waist · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "49 Armor",
@@ -902,26 +1407,71 @@
     "c": null
    },
    {
-    "t": "Часть комплекта Embrace of the Viper",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 16",
     "c": null
    },
    {
-    "t": "Item Level 21",
+    "t": "Embrace of the Viper (0/5) Belt of the Fang",
+    "c": "q"
+   },
+   {
+    "t": "Footpads of the Fang",
+    "c": null
+   },
+   {
+    "t": "Gloves of the Fang",
+    "c": null
+   },
+   {
+    "t": "Leggings of the Fang",
+    "c": null
+   },
+   {
+    "t": "Armor of the Fang",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +10 Intellect.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : +10 Attack Power.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min. (5m cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Lady Anacondra",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 27.01%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Пояс Клыка"
  },
  "12978": {
   "en": "Stormbringer Belt",
   "q": 3,
   "lines": [
    {
-    "t": "Waist",
+    "t": "Item Level 20",
     "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Waist · Mail",
+    "c": "q1"
    },
    {
     "t": "104 Armor",
@@ -934,13 +1484,22 @@
    {
     "t": "+2 Stamina",
     "c": null
+   },
+   {
+    "t": "Requires Level 15",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Пояс Буреносца"
  },
  "14149": {
   "en": "Subterranean Cape",
   "q": 3,
   "lines": [
+   {
+    "t": "Item Level 18",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
@@ -958,7 +1517,7 @@
     "c": null
    },
    {
-    "t": "Equip: Restores 5 health per 5 sec.",
+    "t": "Restores +5 health per 5 sec.",
     "c": "q2"
    },
    {
@@ -966,22 +1525,35 @@
     "c": null
    },
    {
-    "t": "Item Level 18",
+    "t": "Dropped by: Taragaman the Hungerer",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 30.18%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Подземная накидка"
  },
  "15200": {
   "en": "Senior Sergeant's Insignia",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
-    "t": "Neck",
+    "t": "Unique",
     "c": null
+   },
+   {
+    "t": "Neck",
+    "c": "q1"
    },
    {
     "t": "+9 Stamina",
@@ -994,24 +1566,25 @@
    {
     "t": "Requires Level 30",
     "c": null
-   },
-   {
-    "t": "Item Level 35",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Знак отличия старшего сержанта"
  },
  "16978": {
   "en": "Warsong Gauntlets",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 27",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Hands · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "130 Armor",
@@ -1024,37 +1597,51 @@
    {
     "t": "+3 Stamina",
     "c": null
-   },
-   {
-    "t": "Item Level 27",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Рукавицы Песни Войны"
  },
  "17694": {
   "en": "Band of the Fist",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 28",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
     "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+4 Strength",
     "c": null
    },
    {
     "t": "+4 Agility",
     "c": null
-   },
-   {
-    "t": "+4 Strength",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Кольцо Кулака"
  },
  "18427": {
   "en": "Sergeant's Cloak",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique",
     "c": null
    },
    {
@@ -1076,24 +1663,25 @@
    {
     "t": "Requires Level 30",
     "c": null
-   },
-   {
-    "t": "Item Level 35",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Плащ сержанта"
  },
  "257282": {
   "en": "Novice's Quarterstaff",
   "q": 1,
   "lines": [
    {
+    "t": "Item Level 5",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Staff",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "6 - 9 Damage · Speed 2.80",
@@ -1102,24 +1690,25 @@
    {
     "t": "(2.68 damage per second)",
     "c": null
-   },
-   {
-    "t": "Item Level 5",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Окованный посох новобранца"
  },
  "257345": {
   "en": "Honed Greathammer",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 13",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Mace",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "23 - 35 Damage · Speed 3.20",
@@ -1136,17 +1725,18 @@
    {
     "t": "+2 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 13",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Полированный великий молот"
  },
  "257943": {
   "en": "Hunter's Simple Cloak",
   "q": 2,
   "lines": [
+   {
+    "t": "Item Level 8",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
@@ -1162,24 +1752,25 @@
    {
     "t": "+1 Stamina",
     "c": null
-   },
-   {
-    "t": "Item Level 8",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Простой охотничий плащ"
  },
  "263306": {
   "en": "Nightclaw Gloves",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 11",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Hands · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "36 Armor",
@@ -1188,24 +1779,25 @@
    {
     "t": "+1 Agility",
     "c": null
-   },
-   {
-    "t": "Item Level 11",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Перчатки Когтя Ночи"
  },
  "267369": {
   "en": "Wolfsbane",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 31",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Sword",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "69 - 105 Damage · Speed 3.40",
@@ -1224,26 +1816,27 @@
     "c": null
    },
    {
-    "t": "Chance on hit: deals 39-59 Holystorm damage in a blazing wind vortex, tripled against Wolves and Worgen.",
+    "t": "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
     "c": "q2"
-   },
-   {
-    "t": "Item Level 31",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Аконит"
  },
  "270018": {
   "en": "Hammerbone",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 24",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Mace",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "55 - 84 Damage · Speed 3.40",
@@ -1260,24 +1853,25 @@
    {
     "t": "+10 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 24",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Костемолот"
  },
  "270023": {
   "en": "Tanned Shoulderpads",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 27",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Shoulder · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "67 Armor",
@@ -1290,20 +1884,25 @@
    {
     "t": "+6 Intellect",
     "c": null
-   },
-   {
-    "t": "Item Level 27",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Дубленые наплечные пластины"
  },
  "270024": {
   "en": "Bronzed Shoulderguards",
   "q": 2,
   "lines": [
    {
-    "t": "Shoulder",
+    "t": "Item Level 27",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Shoulder · Mail",
+    "c": "q1"
    },
    {
     "t": "142 Armor",
@@ -1317,19 +1916,24 @@
     "t": "+5 Spirit",
     "c": null
    }
-  ]
+  ],
+  "ru": "Отделанные бронзой наплечные щитки"
  },
  "271201": {
   "en": "Atrophic Girdle",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 20",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Waist · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "104 Armor",
@@ -1348,22 +1952,31 @@
     "c": null
    },
    {
-    "t": "Item Level 20",
+    "t": "Dropped by: Witherfang",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 28.06%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Атрофический ремень"
  },
  "271202": {
   "en": "Witherbite Bracers",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 20",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Wrist · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "37 Armor",
@@ -1374,30 +1987,39 @@
     "c": null
    },
    {
-    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 5.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 15",
     "c": null
    },
    {
-    "t": "Item Level 20",
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 5 .",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Witherfang",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.85%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Наручи иссушающего укуса"
  },
  "271203": {
   "en": "Segmented Spider Leg",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 20",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Staff",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "50 - 76 Damage · Speed 3.60",
@@ -1420,22 +2042,31 @@
     "c": null
    },
    {
-    "t": "Item Level 20",
+    "t": "Dropped by: Witherfang",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.12%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Сегментированная нога паука"
  },
  "271212": {
   "en": "Bloodied Chestwraps",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 22",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Chest · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "89 Armor",
@@ -1454,15 +2085,24 @@
     "c": null
    },
    {
-    "t": "Item Level 22",
+    "t": "Dropped by: Viktor the Vile",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.99%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Окровавленный нагрудник"
  },
  "271719": {
   "en": "Furs of the Earthen Ring",
   "q": 3,
   "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
@@ -1486,24 +2126,25 @@
    {
     "t": "+5 Spirit",
     "c": null
-   },
-   {
-    "t": "Item Level 33",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Меха Служителей Земли"
  },
  "271766": {
   "en": "Heavehammer",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Mace",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "73 - 110 Damage · Speed 3.30",
@@ -1514,30 +2155,31 @@
     "c": null
    },
    {
-    "t": "60 Armor",
+    "t": "+60 Armor",
     "c": null
    },
    {
     "t": "Equip: +32 Attack Power.",
     "c": "q2"
-   },
-   {
-    "t": "Item Level 33",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Тяжелая кувалда"
  },
  "271801": {
   "en": "Abandoned Ferocity",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 42",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Axe",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "95 - 143 Damage · Speed 3.20",
@@ -1562,24 +2204,25 @@
    {
     "t": "Requires Level 35",
     "c": null
-   },
-   {
-    "t": "Item Level 42",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Забытая свирепость"
  },
  "273007": {
   "en": "Chasm Walkers",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 18",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Feet · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "56 Armor",
@@ -1590,30 +2233,39 @@
     "c": null
    },
    {
-    "t": "Equip: +4 Attack Power.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 13",
     "c": null
    },
    {
-    "t": "Item Level 18",
+    "t": "Equip: +4 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Bazzalan",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 30.07%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Бездноступы"
  },
  "273023": {
   "en": "Saltscale Girdle",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 31",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Waist · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "124 Armor",
@@ -1632,22 +2284,31 @@
     "c": null
    },
    {
-    "t": "Item Level 31",
+    "t": "Dropped by: Saltspine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 28.01%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Saltscale Girdle]"
  },
  "273025": {
   "en": "Raptorclaw Greaves",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 31",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Feet · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "152 Armor",
@@ -1670,22 +2331,31 @@
     "c": null
    },
    {
-    "t": "Item Level 31",
+    "t": "Dropped by: Shadetooth",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 29.20%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Raptorclaw Greaves]"
  },
  "273028": {
   "en": "Reliquary Mantle",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Shoulder · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "171 Armor",
@@ -1696,30 +2366,43 @@
     "c": null
    },
    {
-    "t": "Equip: Improves your chance to hit by 0.4%.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 28",
     "c": null
    },
    {
-    "t": "Item Level 33",
+    "t": "Equip: Improves your chance to hit by 0.4%.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Relic Guardian",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.56%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Reliquary Mantle]"
  },
  "273031": {
   "en": "Runemender's Seal",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
-    "t": "Finger",
+    "t": "Unique-Equipped",
     "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
    },
    {
     "t": "+6 Intellect",
@@ -1730,30 +2413,39 @@
     "c": null
    },
    {
-    "t": "Equip: Increases healing done by up to 9 and damage done by up to 3 for all magical spells and effects.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 27",
     "c": null
    },
    {
-    "t": "Item Level 32",
+    "t": "Equip: Increases healing done by up to 9 and damage done by up to 3 for all magical spells and effects.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Arcane Anomaly",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.00%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Runemender's Seal]"
  },
  "273035": {
   "en": "Mana-Warped Chain Shirt",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Chest · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "225 Armor",
@@ -1768,7 +2460,7 @@
     "c": null
    },
    {
-    "t": "Equip: Restores 3 mana per 5 sec.",
+    "t": "Restores +3 mana per 5 sec.",
     "c": "q2"
    },
    {
@@ -1776,15 +2468,24 @@
     "c": null
    },
    {
-    "t": "Item Level 32",
+    "t": "Dropped by: Arcane Anomaly",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 34.25%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Mana-Warped Chain Shirt]"
  },
  "273045": {
   "en": "Drape of Shifting Energy",
   "q": 3,
   "lines": [
+   {
+    "t": "Item Level 32",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
@@ -1802,33 +2503,78 @@
     "c": null
    },
    {
-    "t": "Equip: +12 Attack Power.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 27",
     "c": null
    },
    {
-    "t": "Item Level 32",
+    "t": "Equip: +12 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Arcanic Enigma",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 36.54%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Drape of Shifting Energy]"
  },
  "273088": {
   "en": "Snake Eye Kaleidoscope",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 22",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Neck",
+    "c": "q1"
+   },
+   {
+    "t": "+1 Strength",
     "c": null
    },
    {
-    "t": "+1 ко всем характеристикам и сопротивлениям",
+    "t": "+1 Agility",
+    "c": null
+   },
+   {
+    "t": "+1 Stamina",
+    "c": null
+   },
+   {
+    "t": "+1 Intellect",
+    "c": null
+   },
+   {
+    "t": "+1 Spirit",
+    "c": null
+   },
+   {
+    "t": "+1 Arcane Resistance",
+    "c": null
+   },
+   {
+    "t": "+1 Fire Resistance",
+    "c": null
+   },
+   {
+    "t": "+1 Nature Resistance",
+    "c": null
+   },
+   {
+    "t": "+1 Frost Resistance",
+    "c": null
+   },
+   {
+    "t": "+1 Shadow Resistance",
     "c": null
    },
    {
@@ -1836,22 +2582,31 @@
     "c": null
    },
    {
-    "t": "Item Level 22",
+    "t": "Dropped by: Lady Anacondra",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 26.80%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Многоцветный змеиный глаз"
  },
  "273647": {
   "en": "Worgpelt Leggings",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 26",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Legs · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "84 Armor",
@@ -1874,22 +2629,31 @@
     "c": null
    },
    {
-    "t": "Item Level 26",
+    "t": "Dropped by: Wolf Master Nandos",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 27.30%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Поножи из шкуры ворга"
  },
  "273841": {
   "en": "Twilight Maul",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 28",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Two-Hand · Mace",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "60 - 91 Damage · Speed 3.30",
@@ -1900,7 +2664,11 @@
     "c": null
    },
    {
-    "t": "Equip: Increases spell damage and healing by up to 12.",
+    "t": "Requires Level 23",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 12 .",
     "c": "q2"
    },
    {
@@ -1908,22 +2676,31 @@
     "c": "q2"
    },
    {
-    "t": "Requires Level 23",
+    "t": "Dropped by: Lorgus Jett",
     "c": null
    },
    {
-    "t": "Item Level 28",
+    "t": "Drop Chance: 34.19%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Сумеречная кувалда"
  },
  "273842": {
   "en": "Treacherous Treads",
   "q": 3,
   "lines": [
    {
-    "t": "Feet",
+    "t": "Item Level 28",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Feet · Mail",
+    "c": "q1"
    },
    {
     "t": "145 Armor",
@@ -1938,48 +2715,66 @@
     "c": null
    },
    {
+    "t": "Requires Level 23",
+    "c": null
+   },
+   {
     "t": "Equip: Increases all threat generated by 1%.",
     "c": "q2"
+   },
+   {
+    "t": "Dropped by: Lorgus Jett",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 29.43%",
+    "c": null
    }
-  ]
+  ],
+  "ru": "Сапоги коварства"
  },
  "274078": {
   "en": "Boar Signet",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Finger",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "+5 Stamina",
     "c": null
    },
    {
-    "t": "Equip: Increases your chance to block attacks with a shield by 1%.",
+    "t": "Equip: Increases your chance to Block attacks with a shield by 1.0%.",
     "c": "q2"
-   },
-   {
-    "t": "Item Level 32",
-    "c": null
    }
-  ]
+  ],
+  "ru": "[Boar Signet]"
  },
  "274161": {
   "en": "Quillord Mail Leggings",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Legs · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "202 Armor",
@@ -1994,30 +2789,39 @@
     "c": null
    },
    {
-    "t": "Equip: Increases your chance to block attacks with a shield by 2%.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 29",
     "c": null
    },
    {
-    "t": "Item Level 34",
+    "t": "Equip: Increases your chance to Block attacks with a shield by 2.0%.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Overlord Ramtusk",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.89%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Кольчужные поножи властителя игл"
  },
  "274290": {
   "en": "Painwalker Buckler",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Off Hand · Shield",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "738 Armor",
@@ -2032,34 +2836,43 @@
     "c": null
    },
    {
-    "t": "Equip: Increases healing done by up to 13 and damage done by up to 5 for all magical spells and effects.",
-    "c": "q2"
-   },
-   {
-    "t": "Equip: 17% chance when struck in combat to gain 12 mana per 5 sec for 10 sec.",
-    "c": "q2"
-   },
-   {
     "t": "Requires Level 29",
     "c": null
    },
    {
-    "t": "Item Level 34",
+    "t": "Equip: Increases healing done by up to 13 and damage done by up to 5 for all magical spells and effects.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: 17% chance when struck in combat to gain 12 mana per 5 sec for 10 sec. (Proc chance: 17%)",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Interrogator Vishas",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 32.36%",
     "c": null
    }
-  ]
+  ],
+  "ru": "Кулачный щит сносящего боль"
  },
  "274291": {
   "en": "Polished Skullcap",
   "q": 3,
   "lines": [
    {
+    "t": "Item Level 36",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Head · Mail",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "193 Armor",
@@ -2082,84 +2895,120 @@
     "c": null
    },
    {
-    "t": "Item Level 36",
+    "t": "Dropped by: Bloodmage Thalnos",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 33.77%",
     "c": null
    }
-  ]
+  ],
+  "ru": "[Polished Skullcap]"
  },
  "276895": {
   "en": "Transformative Cocoon",
   "q": 2,
   "lines": [
    {
-    "t": "Trinket",
+    "t": "Item Level 30",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique-Equipped",
+    "c": null
+   },
+   {
+    "t": "Trinket",
+    "c": "q1"
    },
    {
     "t": "Use: Absorb up to 260 to 300 damage and Stun yourself for 5 sec. When the Stun expires, gain 60% increased movement speed for 8 sec. (5 Min Cooldown)",
     "c": "q2"
    }
-  ]
+  ],
+  "ru": "Кокон преображения"
  },
  "280805": {
   "en": "Serrated Raptor Claw",
-  "q": 3,
+  "q": 2,
   "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
    {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "One-Hand · Dagger",
+    "c": "q1"
+   },
+   {
+    "t": "19 - 36 Damage · Speed 1.60",
     "c": null
    },
    {
-    "t": "24 - 45 Damage · Speed 1.60",
+    "t": "(17.19 damage per second)",
     "c": null
    },
    {
-    "t": "(21.56 damage per second)",
+    "t": "+3 Agility",
     "c": null
    },
    {
-    "t": "+5 Agility",
-    "c": null
-   },
-   {
-    "t": "Equip: +10 Attack Power.",
+    "t": "Equip: +6 Attack Power.",
     "c": "q2"
    },
    {
-    "t": "Item Level 33",
-    "c": null
+    "t": "\"Some claws are better for killing than cooking.\"",
+    "c": "q"
    }
-  ]
+  ],
+  "ru": "[Serrated Raptor Claw]"
  },
  "281265": {
   "en": "Roadwatcher's Confidence",
   "q": 2,
   "lines": [
    {
-    "t": "Neck",
+    "t": "Item Level 20",
     "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Neck",
+    "c": "q1"
    },
    {
     "t": "+3 Spirit",
     "c": null
    }
-  ]
+  ],
+  "ru": "Уверенность дорожного обходчика"
  },
  "281284": {
   "en": "Howlhide Vest",
   "q": 2,
   "lines": [
    {
+    "t": "Item Level 11",
+    "c": null
+   },
+   {
     "t": "Binds when picked up",
     "c": null
    },
    {
     "t": "Chest · Leather",
-    "c": null
+    "c": "q1"
    },
    {
     "t": "58 Armor",
@@ -2168,20 +3017,25 @@
    {
     "t": "+2 Agility",
     "c": null
-   },
-   {
-    "t": "Item Level 11",
-    "c": null
    }
-  ]
+  ],
+  "ru": "Жилет из шкуры завывателя"
  },
  "286981": {
   "en": "Death Bindings",
   "q": 3,
   "lines": [
    {
-    "t": "Wrist",
+    "t": "Item Level 21",
     "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Wrist · Mail",
+    "c": "q1"
    },
    {
     "t": "82 Armor",
@@ -2194,7 +3048,543 @@
    {
     "t": "+2 Spirit",
     "c": null
+   },
+   {
+    "t": "Requires Level 16",
+    "c": null
    }
-  ]
+  ],
+  "ru": "[Death Bindings]"
+ },
+ "3235": {
+  "en": "Ring of Scorn",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 20",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+4 Stamina",
+    "c": null
+   },
+   {
+    "t": "-3 Spirit",
+    "c": null
+   },
+   {
+    "t": "\"For Deliah\"",
+    "c": "q"
+   }
+  ],
+  "ru": "Кольцо Пренебрежения"
+ },
+ "5351": {
+  "en": "Bounty Hunter's Ring",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 20",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+3 Agility",
+    "c": null
+   },
+   {
+    "t": "+1 Stamina",
+    "c": null
+   }
+  ],
+  "ru": "Кольцо охотника за головами"
+ },
+ "6688": {
+  "en": "Whisperwind Headdress",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "89 Armor",
+    "c": null
+   },
+   {
+    "t": "+11 Stamina",
+    "c": null
+   },
+   {
+    "t": "+11 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 7 .",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Earthcaller Halmgar",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 49.80%",
+    "c": null
+   }
+  ],
+  "ru": "Головной убор Шепчущего Ветра"
+ },
+ "6690": {
+  "en": "Ferine Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 34",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "96 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Intellect",
+    "c": null
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Equip: +26 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Agathelos the Raging",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 28.96%",
+    "c": null
+   }
+  ],
+  "ru": "[Ferine Leggings]"
+ },
+ "6693": {
+  "en": "Agamaggan's Clutch",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique-Equipped",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+5 Stamina",
+    "c": null
+   },
+   {
+    "t": "+6 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Charlga Razorflank",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.07%",
+    "c": null
+   }
+  ],
+  "ru": "Коготь Агамаггана"
+ },
+ "7686": {
+  "en": "Ironspine's Eye",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique-Equipped",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+4 Strength",
+    "c": null
+   },
+   {
+    "t": "+9 Agility",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Ironspine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 30.83%",
+    "c": null
+   }
+  ],
+  "ru": "[Ironspine's Eye]"
+ },
+ "7687": {
+  "en": "Ironspine's Fist",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "One-Hand · Mace",
+    "c": "q1"
+   },
+   {
+    "t": "38 - 72 Damage · Speed 2.40",
+    "c": null
+   },
+   {
+    "t": "(22.92 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+7 Strength",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Ironspine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 27.07%",
+    "c": null
+   }
+  ],
+  "ru": "[Ironspine's Fist]"
+ },
+ "7690": {
+  "en": "Ebon Vise",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 35",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Hands · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "70 Armor",
+    "c": null
+   },
+   {
+    "t": "+4 Strength",
+    "c": null
+   },
+   {
+    "t": "+6 Agility",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Fallen Champion",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 38.52%",
+    "c": null
+   }
+  ],
+  "ru": "[Ebon Vise]"
+ },
+ "271732": {
+  "en": "Dirt-Heavy Bracers",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Wrist · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "43 Armor",
+    "c": null
+   },
+   {
+    "t": "+4 Spirit",
+    "c": null
+   },
+   {
+    "t": "Equip: +10 Attack Power.",
+    "c": "q2"
+   }
+  ],
+  "ru": "Отяжелевшие от грязи наручи"
+ },
+ "273022": {
+  "en": "Supple Bellyskin Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 31",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "92 Armor",
+    "c": null
+   },
+   {
+    "t": "+6 Strength",
+    "c": null
+   },
+   {
+    "t": "+14 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 26",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Saltspine",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 35.51%",
+    "c": null
+   }
+  ],
+  "ru": "[Supple Bellyskin Leggings]"
+ },
+ "273026": {
+  "en": "Garb of Florid Feathers",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 31",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "105 Armor",
+    "c": null
+   },
+   {
+    "t": "+9 Agility",
+    "c": null
+   },
+   {
+    "t": "+15 Intellect",
+    "c": null
+   },
+   {
+    "t": "Requires Level 26",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Shadetooth",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 30.98%",
+    "c": null
+   }
+  ],
+  "ru": "[Garb of Florid Feathers]"
+ },
+ "273030": {
+  "en": "Ring of Power Regulation",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique-Equipped",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "Restores +3 mana per 5 sec.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 28",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 6 .",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Relic Guardian",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 29.21%",
+    "c": null
+   }
+  ],
+  "ru": "[Ring of Power Regulation]"
+ },
+ "274159": {
+  "en": "Thorncursed Grips",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Hands · Leather",
+    "c": "q1"
+   },
+   {
+    "t": "68 Armor",
+    "c": null
+   },
+   {
+    "t": "Requires Level 27",
+    "c": null
+   },
+   {
+    "t": "Equip: +18 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: Your melee weapon attacks deal 2 Nature damage to both you and your target.",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Aggem Thorncurse",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 33.95%",
+    "c": null
+   }
+  ],
+  "ru": "Захваты проклятия шипов"
  }
 }

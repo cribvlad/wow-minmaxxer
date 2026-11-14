@@ -1,7 +1,7 @@
 {
  "status": "ok",
  "url": "https://wow-classic-premium.com/en/forever/character/eu/radi/vas",
- "fetched": "2026-11-14T10:43:00Z",
+ "fetched": "2026-11-14T12:06:22Z",
  "fullName": "Radi Vas",
  "level": 30,
  "race": "Undead",
@@ -164,11 +164,7 @@
   },
   {
    "slot": "trinket2",
-   "id": null,
-   "name": null,
-   "q": null,
-   "ilvl": null,
-   "lines": []
+   "id": null
   },
   {
    "slot": "mainhand",
@@ -177,11 +173,20 @@
    "q": 3,
    "ilvl": 33,
    "lines": [
-    "64 - 97 Damage · Speed 2.90",
+    "64 - 97 Damage",
+    "Speed 2.90",
     "(27.8 damage per second)",
     "+10 Stamina",
     "+15 Spirit"
    ]
+  },
+  {
+   "slot": "offhand",
+   "id": null
+  },
+  {
+   "slot": "ranged",
+   "id": null
   }
  ],
  "stats": {
@@ -192,9 +197,21 @@
   "Intellect": "38",
   "Spirit": "72",
   "Attack power": "272",
+  "Ranged attack power": "6",
   "Melee critical strike": "10.89%",
+  "Ranged critical strike": "2.21%",
+  "Melee haste": "0%",
+  "Ranged haste": "0%",
   "Main-hand DPS": "50.02",
-  "Armor": "1,119"
+  "Off-hand DPS": "9.96",
+  "Spell power": "0",
+  "Spell critical strike": "10.69%",
+  "Spell haste": "0%",
+  "Spell penetration": "0",
+  "Armor": "1,119",
+  "Dodge": "4.89%",
+  "Parry": "4.8%",
+  "Block": "4.8%"
  },
  "talents": [
   {
@@ -204,138 +221,138 @@
     {
      "r": 0,
      "c": 1,
+     "rank": null,
      "max": 5,
      "name": "Spiritual Focus",
-     "desc": "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 14% chance to not lose casting time when you take damage.",
-     "rank": null
+     "desc": "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 14% chance to not lose casting time when you take damage."
     },
     {
      "r": 0,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Divine Strength",
-     "desc": "Increases your Strength by 2%.",
-     "rank": null
+     "desc": "Increases your Strength by 2%."
     },
     {
      "r": 1,
      "c": 0,
+     "rank": null,
      "max": 3,
      "name": "Healing Light",
-     "desc": "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 4%.",
-     "rank": null
+     "desc": "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 4%."
     },
     {
      "r": 1,
      "c": 1,
+     "rank": null,
      "max": 2,
      "name": "Reverence",
-     "desc": "Allows 15% of your Mana regeneration to continue while casting.",
-     "rank": null
+     "desc": "Allows 15% of your Mana regeneration to continue while casting."
     },
     {
      "r": 1,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Improved Seals",
-     "desc": "Increases the damage done by your Seals and Judgements by 3%.",
-     "rank": null
+     "desc": "Increases the damage done by your Seals and Judgements by 3%."
     },
     {
      "r": 1,
      "c": 3,
+     "rank": null,
      "max": 2,
      "name": "Purifying Power",
-     "desc": "Reduces the mana cost of your Cleanse and Purify spells by 10% and reduces the cooldown of your Exorcism and Holy Wrath spells by 17%.",
-     "rank": null
+     "desc": "Reduces the mana cost of your Cleanse and Purify spells by 10% and reduces the cooldown of your Exorcism and Holy Wrath spells by 17%."
     },
     {
      "r": 2,
      "c": 0,
+     "rank": null,
      "max": 1,
      "name": "Divine Favor",
-     "desc": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
-     "rank": null
+     "desc": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance."
     },
     {
      "r": 2,
      "c": 1,
+     "rank": null,
      "max": 5,
      "name": "Illumination",
-     "desc": "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 50% of the base cost of the spell.",
-     "rank": null
+     "desc": "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 50% of the base cost of the spell."
     },
     {
      "r": 2,
      "c": 2,
+     "rank": null,
      "max": 2,
      "name": "Holy Conduit",
-     "desc": "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 20%.",
-     "rank": null
+     "desc": "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 20%."
     },
     {
      "r": 3,
      "c": 0,
+     "rank": null,
      "max": 2,
      "name": "Divine Precision",
-     "desc": "Improves your chance to hit with Holy spells by 4%, and reduces the duration of Silence effects on you by 10%.",
-     "rank": null
+     "desc": "Improves your chance to hit with Holy spells by 4%, and reduces the duration of Silence effects on you by 10%."
     },
     {
      "r": 3,
      "c": 1,
+     "rank": null,
      "max": 2,
      "name": "Infusion of Light",
-     "desc": "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.",
-     "rank": null
+     "desc": "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec."
     },
     {
      "r": 3,
      "c": 2,
+     "rank": null,
      "max": 1,
      "name": "Oath of Light",
-     "desc": "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light and Holy Shock on them. Only one Oath of Light may be sworn by the Paladin at any one time.",
-     "rank": null
+     "desc": "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light on them by up to 0, your Flash of Light by up to 0, and your Holy Shock by up to 0. Only one Oath of Light may be sworn by the Paladin at any one time."
     },
     {
      "r": 4,
      "c": 0,
+     "rank": null,
      "max": 2,
      "name": "Consecrated Ground",
-     "desc": "Gives your Holy spells 5% increased damage against the first 4 enemies that enter your Consecration.",
-     "rank": null
+     "desc": "Gives your Holy spells 5% increased damage against the first 4 enemies that enter your Consecration."
     },
     {
      "r": 4,
      "c": 1,
+     "rank": null,
      "max": 1,
      "name": "Holy Shock",
-     "desc": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
-     "rank": null
+     "desc": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally."
     },
     {
      "r": 4,
      "c": 2,
+     "rank": null,
      "max": 2,
      "name": "Boundless Light",
-     "desc": "Increases the critical strike chance of your Holy Shock spell by 15% when cast on allies not affected by your Oath of Light.",
-     "rank": null
+     "desc": "Increases the critical strike chance of your Holy Shock spell by 15% when cast on allies not affected by your Oath of Light."
     },
     {
      "r": 5,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Holy Power",
-     "desc": "Increases the critical strike healing bonus of your Holy spells by 10%.",
-     "rank": null
+     "desc": "Increases the critical strike healing bonus of your Holy spells by 10%."
     },
     {
      "r": 6,
      "c": 1,
+     "rank": null,
      "max": 1,
      "name": "Light's Vigil",
-     "desc": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 315 to 333. Only one Vigil per Paladin may be active in each party.",
-     "rank": null
+     "desc": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 315 to 333. Only one Vigil per Paladin may be active in each party."
     }
    ]
   },
@@ -346,138 +363,138 @@
     {
      "r": 0,
      "c": 1,
+     "rank": null,
      "max": 5,
      "name": "Divine Intellect",
-     "desc": "Increases your total Intellect by 2%.",
-     "rank": null
+     "desc": "Increases your total Intellect by 2%."
     },
     {
      "r": 0,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Redoubt",
-     "desc": "Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%. Lasts 10 sec or 5 blocks.",
-     "rank": null
+     "desc": "Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%.  Lasts 10 sec or 5 blocks."
     },
     {
      "r": 1,
      "c": 0,
+     "rank": null,
      "max": 3,
      "name": "Precision",
-     "desc": "Improves your chance to hit by 1%.",
-     "rank": null
+     "desc": "Improves your chance to hit by 1%."
     },
     {
      "r": 1,
      "c": 1,
+     "rank": null,
      "max": 2,
      "name": "Guardian's Favor",
-     "desc": "Reduces the cooldown of your Blessing of Protection by 1 min and increases the duration of your Blessing of Freedom by 3 sec.",
-     "rank": null
+     "desc": "Reduces the cooldown of your Blessing of Protection by 1 min and increases the duration of your Blessing of Freedom by 3 sec."
     },
     {
      "r": 1,
      "c": 3,
+     "rank": null,
      "max": 2,
      "name": "Sacred Duty",
-     "desc": "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec, and reduces the duration of Forbearance by 5 sec.",
-     "rank": null
+     "desc": "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec, and reduces the duration of Forbearance by 5 sec."
     },
     {
      "r": 2,
      "c": 0,
+     "rank": null,
      "max": 1,
      "name": "Templar's Bulwark",
-     "desc": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
-     "rank": null
+     "desc": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active."
     },
     {
      "r": 2,
      "c": 1,
+     "rank": null,
      "max": 3,
      "name": "Improved Hammer of Justice",
-     "desc": "Decreases the cooldown of your Hammer of Justice spell by 5 sec.",
-     "rank": null
+     "desc": "Decreases the cooldown of your Hammer of Justice spell by 5 sec."
     },
     {
      "r": 2,
      "c": 2,
+     "rank": null,
      "max": 2,
      "name": "Shield Specialization",
-     "desc": "Increases the amount of damage absorbed by your shield by 15%, and gives your blocks a 50% chance to restore 4% of your maximum Mana.",
-     "rank": null
+     "desc": "Increases the amount of damage absorbed by your shield by 15%, and gives your blocks a 50% chance to restore 4% of your maximum Mana."
     },
     {
      "r": 2,
      "c": 3,
+     "rank": null,
      "max": 5,
      "name": "Toughness",
-     "desc": "Increases your armor value from items by 2%.",
-     "rank": null
+     "desc": "Increases your armor value from items by 2%."
     },
     {
      "r": 3,
      "c": 0,
+     "rank": null,
      "max": 1,
      "name": "Swift Judgement",
-     "desc": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Does not share a cooldown with your Judgement ability.",
-     "rank": null
+     "desc": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect. Does not share a cooldown with your Judgement ability."
     },
     {
      "r": 3,
      "c": 1,
+     "rank": null,
      "max": 3,
      "name": "Improved Righteous Fury",
-     "desc": "While Righteous Fury is active, all damage taken is reduced by 3%.",
-     "rank": null
+     "desc": "While Righteous Fury is active, all damage taken is reduced by 3%."
     },
     {
      "r": 3,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Anticipation",
-     "desc": "Increases your Defense Skill by 4.",
-     "rank": null
+     "desc": "Increases your Defense Skill by 4."
     },
     {
      "r": 4,
      "c": 0,
+     "rank": null,
      "max": 2,
      "name": "Stoicism",
-     "desc": "Reduces the duration of Stun and Charm effects on you by 10%.",
-     "rank": null
+     "desc": "Reduces the duration of Stun and Charm effects on you by 10%."
     },
     {
      "r": 4,
      "c": 1,
+     "rank": null,
      "max": 1,
      "name": "Holy Shield",
-     "desc": "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. 4 charges.",
-     "rank": null
+     "desc": "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
     },
     {
      "r": 4,
      "c": 2,
+     "rank": null,
      "max": 5,
      "name": "Reckoning",
-     "desc": "Gives you a 8% chance after Blocking and a 20% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks.",
-     "rank": null
+     "desc": "Gives you a 8% chance after Blocking and a 20% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks."
     },
     {
      "r": 5,
      "c": 2,
+     "rank": null,
      "max": 3,
      "name": "Iron Creed",
-     "desc": "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec.",
-     "rank": null
+     "desc": "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec."
     },
     {
      "r": 6,
      "c": 1,
+     "rank": null,
      "max": 1,
      "name": "Shieldsworn",
-     "desc": "Reduces the cooldown of your Holy Strike ability by 4 sec. Holy Strike now strikes with your shield, triggering Holy Shield and Shield Specialization without consuming their charges, and allowing you to Block spells for 6 sec.",
-     "rank": null
+     "desc": "Reduces the cooldown of your Holy Strike ability by 4 sec. Additionally, Holy Strike now strikes with your shield, triggering your active Holy Shield and Shield Specialization talents without consuming their charges or triggering their cooldowns, and allowing you to Block spells for 6 sec."
     }
    ]
   },
@@ -488,138 +505,138 @@
     {
      "r": 0,
      "c": 1,
+     "rank": 0,
      "max": 5,
-     "name": "Deflection",
-     "desc": "Increases your Parry chance by 1%.",
-     "rank": 0
+     "name": "Deflection 0/5",
+     "desc": "Increases your Parry chance by 1%."
     },
     {
      "r": 0,
      "c": 2,
+     "rank": 5,
      "max": 5,
-     "name": "Benediction",
-     "desc": "Reduces the Mana cost of all instant cast spells and abilities by 10%.",
-     "rank": 5
+     "name": "Benediction 5/5",
+     "desc": "Reduces the Mana cost of all instant cast spells and abilities by 10%."
     },
     {
      "r": 1,
      "c": 0,
+     "rank": 2,
      "max": 2,
-     "name": "Improved Judgement",
-     "desc": "Decreases the cooldown of your Judgement ability by 2 sec.",
-     "rank": 2
+     "name": "Improved Judgement 2/2",
+     "desc": "Decreases the cooldown of your Judgement ability by 2 sec."
     },
     {
      "r": 1,
      "c": 1,
+     "rank": 3,
      "max": 3,
-     "name": "Conviction",
-     "desc": "Improves your chance to get a critical strike with all spells and attacks by 6%.",
-     "rank": 3
+     "name": "Conviction 3/3",
+     "desc": "Improves your chance to get a critical strike with all spells and attacks by 6%."
     },
     {
      "r": 1,
      "c": 2,
+     "rank": 3,
      "max": 3,
-     "name": "Sanctified Judgement",
-     "desc": "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal.",
-     "rank": 3
+     "name": "Sanctified Judgement 3/3",
+     "desc": "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal."
     },
     {
      "r": 2,
      "c": 0,
+     "rank": 0,
      "max": 3,
-     "name": "Vindication",
-     "desc": "Gives your damaging melee attacks a chance to reduce the target's Attack Power for 30 sec.",
-     "rank": 0
+     "name": "Vindication 0/3",
+     "desc": "Gives your damaging melee attacks a chance to reduce the target's Attack Power by -2 for 30 sec."
     },
     {
      "r": 2,
      "c": 1,
+     "rank": 0,
      "max": 2,
-     "name": "Unyielding Faith",
-     "desc": "Reduces the duration of Fear and Disorient effects on you by 15%.",
-     "rank": 0
+     "name": "Unyielding Faith 0/2",
+     "desc": "Reduces the duration of Fear and Disorient effects on you by 15%."
     },
     {
      "r": 2,
      "c": 2,
+     "rank": 1,
      "max": 1,
-     "name": "Seal of Command",
-     "desc": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 73 to 78 Holy damage, 146 to 155 if the target is stunned or incapacitated.",
-     "rank": 1
+     "name": "Seal of Command 1/1",
+     "desc": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 73 to 78 Holy damage, 146 to 155 if the target is stunned or incapacitated."
     },
     {
      "r": 2,
      "c": 3,
+     "rank": 2,
      "max": 2,
-     "name": "Pursuit of Justice",
-     "desc": "Increases movement speed and mounted movement speed by 15%. This does not stack with other movement speed increasing effects.",
-     "rank": 2
+     "name": "Pursuit of Justice 2/2",
+     "desc": "Increases movement speed and mounted movement speed by 15%.  This does not stack with other movement speed increasing effects."
     },
     {
      "r": 3,
      "c": 0,
+     "rank": 0,
      "max": 2,
-     "name": "Eye for an Eye",
-     "desc": "All critical strikes against you cause 5% of the damage taken to the attacker as well. Cannot exceed 50% of the Paladin's total health.",
-     "rank": 0
+     "name": "Eye for an Eye 0/2",
+     "desc": "All critical strikes against you cause 5% of the damage taken to the attacker as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
     },
     {
      "r": 3,
      "c": 1,
+     "rank": 1,
      "max": 1,
-     "name": "Sacred Arbiter",
-     "desc": "Increases the damage of your Holy Strike ability by 20% and causes it to refresh all Judgement effects on the target.",
-     "rank": 1
+     "name": "Sacred Arbiter 1/1",
+     "desc": "Increases the damage of your Holy Strike ability by 20% and causes it to refresh all Judgement effects on the target."
     },
     {
      "r": 3,
      "c": 3,
+     "rank": 3,
      "max": 3,
-     "name": "Two-Handed Weapon Specialization",
-     "desc": "Increases the Physical and Holy damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped.",
-     "rank": 3
+     "name": "Two-Handed Weapon Specialization 3/3",
+     "desc": "Increases the Physical and Holy damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
     },
     {
      "r": 4,
      "c": 0,
+     "rank": 0,
      "max": 2,
-     "name": "Turn Evil",
-     "desc": "Reduces the cast time of your Turn Undead spell by 0.5 sec, its cooldown by 5 sec, and allows it to affect Demons.",
-     "rank": 0
+     "name": "Turn Evil 0/2",
+     "desc": "Reduces the cast time of your Turn Undead spell by 0.5 sec, its cooldown by 5 sec, and allows it to affect Demons."
     },
     {
      "r": 4,
      "c": 1,
+     "rank": 0,
      "max": 1,
-     "name": "Repentance",
-     "desc": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.",
-     "rank": 0
+     "name": "Repentance 0/1",
+     "desc": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
     },
     {
      "r": 4,
      "c": 2,
+     "rank": 0,
      "max": 3,
-     "name": "Vengeance",
-     "desc": "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times.",
-     "rank": 0
+     "name": "Vengeance 0/3",
+     "desc": "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike.  Stacks up to 5 times."
     },
     {
      "r": 5,
      "c": 2,
+     "rank": 0,
      "max": 5,
-     "name": "Champion of the Light",
-     "desc": "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec.",
-     "rank": 0
+     "name": "Champion of the Light 0/5",
+     "desc": "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec."
     },
     {
      "r": 6,
      "c": 1,
+     "rank": 0,
      "max": 1,
-     "name": "Unsealed Wrath",
-     "desc": "Your melee attacks store a copy of your active Seal for 15 sec, stacking up to 3 times. Landing an attack with a different Seal consumes all stacks, giving the stored Seal its normal chance to activate once per stack.",
-     "rank": 0
+     "name": "Unsealed Wrath 0/1",
+     "desc": "Your melee attacks store a copy of your active Seal for 15 sec, stacking up to 3 times. Landing an attack with a different Seal consumes all stacks, giving the stored Seal its normal chance to activate once per stack."
     }
    ]
   }
