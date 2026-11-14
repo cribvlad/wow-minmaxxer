@@ -13,19 +13,5 @@
   "professions": [
    "Mining"
   ]
- },
- {
-  "id": "rygal-hurmoy",
-  "name": "Рыгал",
-  "surname": "Хурмой",
-  "region": "eu",
-  "owner": "Влад",
-  "added": "2026-11-11",
-  "manual": {
-   "cls": "Druid",
-   "race": "Skyborne (Windshaper)",
-   "level": 13,
-   "spec": "feral"
-  }
  }
 ]
