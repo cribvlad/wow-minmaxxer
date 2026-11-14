@@ -1,0 +1,8 @@
+name: Удалить персонажа
+description: Убрать персонажа из журнала.
+title: "[remove] "
+body:
+  - type: input
+    id: who
+    attributes: { label: Персонаж, description: "Имя и фамилия, например Radi Vas" }
+    validations: { required: true }

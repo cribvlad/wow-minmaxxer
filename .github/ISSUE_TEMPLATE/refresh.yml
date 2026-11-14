@@ -1,0 +1,6 @@
+name: Обновить статусы
+description: Перечитать armory для всех персонажей.
+title: "[refresh] статусы"
+body:
+  - type: markdown
+    attributes: { value: "Просто отправь заявку: бот перечитает armory, обновит сайт и закроет ее." }

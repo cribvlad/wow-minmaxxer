@@ -1,0 +1,28 @@
+[
+ {
+  "id": "radi-vas",
+  "name": "Radi",
+  "surname": "Vas",
+  "region": "eu",
+  "owner": "Влад",
+  "added": "2026-11-11",
+  "manual": {
+   "cls": "Paladin",
+   "level": 30
+  }
+ },
+ {
+  "id": "rygal-hurmoy",
+  "name": "Рыгал",
+  "surname": "Хурмой",
+  "region": "eu",
+  "owner": "Влад",
+  "added": "2026-11-11",
+  "manual": {
+   "cls": "Druid",
+   "race": "Skyborne (Windshaper)",
+   "level": 13,
+   "spec": "feral"
+  }
+ }
+]

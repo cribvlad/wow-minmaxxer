@@ -1,0 +1,2200 @@
+{
+ "2877": {
+  "en": "Combatant Claymore",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Two-Hand · Sword",
+    "c": null
+   },
+   {
+    "t": "64 - 97 Damage · Speed 2.90",
+    "c": null
+   },
+   {
+    "t": "(27.8 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "+15 Spirit",
+    "c": null
+   }
+  ]
+ },
+ "3732": {
+  "en": "Hooded Cowl",
+  "q": 1,
+  "lines": [
+   {
+    "t": "Head · Cloth",
+    "c": null
+   },
+   {
+    "t": "33 Armor",
+    "c": null
+   }
+  ]
+ },
+ "3751": {
+  "en": "Mercenary Leggings",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Legs",
+    "c": null
+   },
+   {
+    "t": "173 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Agility",
+    "c": null
+   },
+   {
+    "t": "+7 Strength",
+    "c": null
+   }
+  ]
+ },
+ "4643": {
+  "en": "Grimsteel Cape",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "23 Armor",
+    "c": null
+   },
+   {
+    "t": "+2 Agility",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "4724": {
+  "en": "Humbert's Helm",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Head · Leather",
+    "c": null
+   },
+   {
+    "t": "76 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Agility",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 25",
+    "c": null
+   },
+   {
+    "t": "Item Level 30",
+    "c": null
+   }
+  ]
+ },
+ "6321": {
+  "en": "Silverlaine's Family Seal",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+2 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases movement speed by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 21",
+    "c": null
+   },
+   {
+    "t": "Item Level 26",
+    "c": null
+   }
+  ]
+ },
+ "6414": {
+  "en": "Seal of Sylvanas",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "+6 Attack Power",
+    "c": null
+   }
+  ]
+ },
+ "6480": {
+  "en": "Slick Deviate Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Leather",
+    "c": null
+   },
+   {
+    "t": "75 Armor",
+    "c": null
+   },
+   {
+    "t": "+4 Agility",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 20",
+    "c": null
+   }
+  ]
+ },
+ "6627": {
+  "en": "Mutant Scale Breastplate",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Chest · Mail",
+    "c": null
+   },
+   {
+    "t": "194 Armor",
+    "c": null
+   },
+   {
+    "t": "+10 Strength",
+    "c": null
+   },
+   {
+    "t": "+4 Stamina",
+    "c": null
+   }
+  ]
+ },
+ "6629": {
+  "en": "Sporid Cape",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "20 Armor",
+    "c": null
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: When struck in combat, inflicts 1 Nature damage to the attacker.",
+    "c": "q2"
+   }
+  ]
+ },
+ "6686": {
+  "en": "Tusken Helm",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Mail",
+    "c": null
+   },
+   {
+    "t": "188 Armor",
+    "c": null
+   },
+   {
+    "t": "+13 Strength",
+    "c": null
+   },
+   {
+    "t": "+120 Armor",
+    "c": null
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Item Level 34",
+    "c": null
+   }
+  ]
+ },
+ "6687": {
+  "en": "Corpsemaker",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Axe",
+    "c": null
+   },
+   {
+    "t": "88 - 132 Damage · Speed 3.80",
+    "c": null
+   },
+   {
+    "t": "(28.95 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+15 Strength",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Item Level 34",
+    "c": null
+   }
+  ]
+ },
+ "6692": {
+  "en": "Pronged Reaver",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "One-Hand · Axe",
+    "c": null
+   },
+   {
+    "t": "38 - 72 Damage · Speed 2.40",
+    "c": null
+   },
+   {
+    "t": "(22.92 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "6694": {
+  "en": "Heart of Agamaggan",
+  "q": null,
+  "lines": [
+   {
+    "t": "Off Hand · Shield",
+    "c": null
+   },
+   {
+    "t": "757 Armor",
+    "c": null
+   },
+   {
+    "t": "17 Block",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   }
+  ]
+ },
+ "6748": {
+  "en": "Monkey Ring",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+5 Agility",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "6749": {
+  "en": "Tiger Band",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "6750": {
+  "en": "Snake Hoop",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+5 Intellect",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 6.",
+    "c": "q2"
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "6906": {
+  "en": "Algae Fists",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Hands · Mail",
+    "c": null
+   },
+   {
+    "t": "132 Armor",
+    "c": null
+   },
+   {
+    "t": "+8 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Stamina",
+    "c": null
+   },
+   {
+    "t": "+5 Nature Resistance",
+    "c": null
+   }
+  ]
+ },
+ "7683": {
+  "en": "Bloody Brass Knuckles",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "One-Hand · Fist Weapon",
+    "c": null
+   },
+   {
+    "t": "24 - 46 Damage · Speed 1.60",
+    "c": null
+   },
+   {
+    "t": "(21.88 damage per second)",
+    "c": null
+   },
+   {
+    "t": "Equip: +12 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: +15 Attack Power against Humanoids.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Item Level 34",
+    "c": null
+   }
+  ]
+ },
+ "7688": {
+  "en": "Ironspine's Ribcage",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": null
+   },
+   {
+    "t": "235 Armor",
+    "c": null
+   },
+   {
+    "t": "+6 Strength",
+    "c": null
+   },
+   {
+    "t": "+3 Agility",
+    "c": null
+   },
+   {
+    "t": "+17 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "7689": {
+  "en": "Morbid Dawn",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Sword",
+    "c": null
+   },
+   {
+    "t": "70 - 105 Damage · Speed 2.90",
+    "c": null
+   },
+   {
+    "t": "(30.17 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+10 Strength",
+    "c": null
+   },
+   {
+    "t": "+15 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "7731": {
+  "en": "Ghostshard Talisman",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Neck",
+    "c": null
+   },
+   {
+    "t": "+9 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: +14 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: +12 Attack Power against Undead.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "7751": {
+  "en": "Vorrel's Boots",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Feet · Leather",
+    "c": null
+   },
+   {
+    "t": "70 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Agility",
+    "c": null
+   },
+   {
+    "t": "+3 Stamina",
+    "c": null
+   },
+   {
+    "t": "+7 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "10328": {
+  "en": "Scarlet Chestpiece",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": null
+   },
+   {
+    "t": "250 Armor",
+    "c": null
+   },
+   {
+    "t": "+8 Strength",
+    "c": null
+   },
+   {
+    "t": "+19 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 34",
+    "c": null
+   },
+   {
+    "t": "Item Level 39",
+    "c": null
+   }
+  ]
+ },
+ "10329": {
+  "en": "Scarlet Belt",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Waist · Mail",
+    "c": null
+   },
+   {
+    "t": "136 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 32",
+    "c": null
+   },
+   {
+    "t": "Item Level 37",
+    "c": null
+   }
+  ]
+ },
+ "10330": {
+  "en": "Scarlet Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Mail",
+    "c": null
+   },
+   {
+    "t": "236 Armor",
+    "c": null
+   },
+   {
+    "t": "+21 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 39",
+    "c": null
+   },
+   {
+    "t": "Item Level 44",
+    "c": null
+   }
+  ]
+ },
+ "10331": {
+  "en": "Scarlet Gauntlets",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Hands · Mail",
+    "c": null
+   },
+   {
+    "t": "153 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Agility",
+    "c": null
+   },
+   {
+    "t": "Requires Level 33",
+    "c": null
+   },
+   {
+    "t": "Item Level 38",
+    "c": null
+   }
+  ]
+ },
+ "10332": {
+  "en": "Scarlet Boots",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Feet · Mail",
+    "c": null
+   },
+   {
+    "t": "161 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Agility",
+    "c": null
+   },
+   {
+    "t": "+12 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "10333": {
+  "en": "Scarlet Wristguards",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Wrist · Mail",
+    "c": null
+   },
+   {
+    "t": "104 Armor",
+    "c": null
+   },
+   {
+    "t": "+11 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 31",
+    "c": null
+   },
+   {
+    "t": "Item Level 36",
+    "c": null
+   }
+  ]
+ },
+ "10412": {
+  "en": "Belt of the Fang",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Waist · Leather",
+    "c": null
+   },
+   {
+    "t": "49 Armor",
+    "c": null
+   },
+   {
+    "t": "+3 Agility",
+    "c": null
+   },
+   {
+    "t": "+5 Stamina",
+    "c": null
+   },
+   {
+    "t": "Часть комплекта Embrace of the Viper",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 16",
+    "c": null
+   },
+   {
+    "t": "Item Level 21",
+    "c": null
+   }
+  ]
+ },
+ "12978": {
+  "en": "Stormbringer Belt",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Waist",
+    "c": null
+   },
+   {
+    "t": "104 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+2 Stamina",
+    "c": null
+   }
+  ]
+ },
+ "14149": {
+  "en": "Subterranean Cape",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "17 Armor",
+    "c": null
+   },
+   {
+    "t": "+3 Strength",
+    "c": null
+   },
+   {
+    "t": "Equip: Restores 5 health per 5 sec.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 13",
+    "c": null
+   },
+   {
+    "t": "Item Level 18",
+    "c": null
+   }
+  ]
+ },
+ "15200": {
+  "en": "Senior Sergeant's Insignia",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Neck",
+    "c": null
+   },
+   {
+    "t": "+9 Stamina",
+    "c": null
+   },
+   {
+    "t": "+4 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "16978": {
+  "en": "Warsong Gauntlets",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Hands · Mail",
+    "c": null
+   },
+   {
+    "t": "130 Armor",
+    "c": null
+   },
+   {
+    "t": "+10 Strength",
+    "c": null
+   },
+   {
+    "t": "+3 Stamina",
+    "c": null
+   },
+   {
+    "t": "Item Level 27",
+    "c": null
+   }
+  ]
+ },
+ "17694": {
+  "en": "Band of the Fist",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+4 Agility",
+    "c": null
+   },
+   {
+    "t": "+4 Strength",
+    "c": null
+   }
+  ]
+ },
+ "18427": {
+  "en": "Sergeant's Cloak",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "26 Armor",
+    "c": null
+   },
+   {
+    "t": "+9 Stamina",
+    "c": null
+   },
+   {
+    "t": "+40 Armor",
+    "c": null
+   },
+   {
+    "t": "Requires Level 30",
+    "c": null
+   },
+   {
+    "t": "Item Level 35",
+    "c": null
+   }
+  ]
+ },
+ "257282": {
+  "en": "Novice's Quarterstaff",
+  "q": 1,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Staff",
+    "c": null
+   },
+   {
+    "t": "6 - 9 Damage · Speed 2.80",
+    "c": null
+   },
+   {
+    "t": "(2.68 damage per second)",
+    "c": null
+   },
+   {
+    "t": "Item Level 5",
+    "c": null
+   }
+  ]
+ },
+ "257345": {
+  "en": "Honed Greathammer",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Mace",
+    "c": null
+   },
+   {
+    "t": "23 - 35 Damage · Speed 3.20",
+    "c": null
+   },
+   {
+    "t": "(9.06 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+2 Strength",
+    "c": null
+   },
+   {
+    "t": "+2 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 13",
+    "c": null
+   }
+  ]
+ },
+ "257943": {
+  "en": "Hunter's Simple Cloak",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "8 Armor",
+    "c": null
+   },
+   {
+    "t": "+1 Stamina",
+    "c": null
+   },
+   {
+    "t": "Item Level 8",
+    "c": null
+   }
+  ]
+ },
+ "263306": {
+  "en": "Nightclaw Gloves",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Hands · Leather",
+    "c": null
+   },
+   {
+    "t": "36 Armor",
+    "c": null
+   },
+   {
+    "t": "+1 Agility",
+    "c": null
+   },
+   {
+    "t": "Item Level 11",
+    "c": null
+   }
+  ]
+ },
+ "267369": {
+  "en": "Wolfsbane",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Sword",
+    "c": null
+   },
+   {
+    "t": "69 - 105 Damage · Speed 3.40",
+    "c": null
+   },
+   {
+    "t": "(25.59 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+9 Stamina",
+    "c": null
+   },
+   {
+    "t": "+10 Intellect",
+    "c": null
+   },
+   {
+    "t": "Chance on hit: deals 39-59 Holystorm damage in a blazing wind vortex, tripled against Wolves and Worgen.",
+    "c": "q2"
+   },
+   {
+    "t": "Item Level 31",
+    "c": null
+   }
+  ]
+ },
+ "270018": {
+  "en": "Hammerbone",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Mace",
+    "c": null
+   },
+   {
+    "t": "55 - 84 Damage · Speed 3.40",
+    "c": null
+   },
+   {
+    "t": "(20.44 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+7 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 24",
+    "c": null
+   }
+  ]
+ },
+ "270023": {
+  "en": "Tanned Shoulderpads",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Shoulder · Leather",
+    "c": null
+   },
+   {
+    "t": "67 Armor",
+    "c": null
+   },
+   {
+    "t": "+3 Strength",
+    "c": null
+   },
+   {
+    "t": "+6 Intellect",
+    "c": null
+   },
+   {
+    "t": "Item Level 27",
+    "c": null
+   }
+  ]
+ },
+ "270024": {
+  "en": "Bronzed Shoulderguards",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Shoulder",
+    "c": null
+   },
+   {
+    "t": "142 Armor",
+    "c": null
+   },
+   {
+    "t": "+4 Stamina",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   }
+  ]
+ },
+ "271201": {
+  "en": "Atrophic Girdle",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Waist · Mail",
+    "c": null
+   },
+   {
+    "t": "104 Armor",
+    "c": null
+   },
+   {
+    "t": "+3 Strength",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 15",
+    "c": null
+   },
+   {
+    "t": "Item Level 20",
+    "c": null
+   }
+  ]
+ },
+ "271202": {
+  "en": "Witherbite Bracers",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Wrist · Leather",
+    "c": null
+   },
+   {
+    "t": "37 Armor",
+    "c": null
+   },
+   {
+    "t": "+4 Agility",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 5.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 15",
+    "c": null
+   },
+   {
+    "t": "Item Level 20",
+    "c": null
+   }
+  ]
+ },
+ "271203": {
+  "en": "Segmented Spider Leg",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Staff",
+    "c": null
+   },
+   {
+    "t": "50 - 76 Damage · Speed 3.60",
+    "c": null
+   },
+   {
+    "t": "(17.50 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+9 Agility",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 15",
+    "c": null
+   },
+   {
+    "t": "Item Level 20",
+    "c": null
+   }
+  ]
+ },
+ "271212": {
+  "en": "Bloodied Chestwraps",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Leather",
+    "c": null
+   },
+   {
+    "t": "89 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Agility",
+    "c": null
+   },
+   {
+    "t": "+9 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 17",
+    "c": null
+   },
+   {
+    "t": "Item Level 22",
+    "c": null
+   }
+  ]
+ },
+ "271719": {
+  "en": "Furs of the Earthen Ring",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "25 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Intellect",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Item Level 33",
+    "c": null
+   }
+  ]
+ },
+ "271766": {
+  "en": "Heavehammer",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Mace",
+    "c": null
+   },
+   {
+    "t": "73 - 110 Damage · Speed 3.30",
+    "c": null
+   },
+   {
+    "t": "(27.73 damage per second)",
+    "c": null
+   },
+   {
+    "t": "60 Armor",
+    "c": null
+   },
+   {
+    "t": "Equip: +32 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Item Level 33",
+    "c": null
+   }
+  ]
+ },
+ "271801": {
+  "en": "Abandoned Ferocity",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Axe",
+    "c": null
+   },
+   {
+    "t": "95 - 143 Damage · Speed 3.20",
+    "c": null
+   },
+   {
+    "t": "(37.19 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+10 Strength",
+    "c": null
+   },
+   {
+    "t": "+4 Agility",
+    "c": null
+   },
+   {
+    "t": "+12 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 35",
+    "c": null
+   },
+   {
+    "t": "Item Level 42",
+    "c": null
+   }
+  ]
+ },
+ "273007": {
+  "en": "Chasm Walkers",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Feet · Leather",
+    "c": null
+   },
+   {
+    "t": "56 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Equip: +4 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 13",
+    "c": null
+   },
+   {
+    "t": "Item Level 18",
+    "c": null
+   }
+  ]
+ },
+ "273023": {
+  "en": "Saltscale Girdle",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Waist · Mail",
+    "c": null
+   },
+   {
+    "t": "124 Armor",
+    "c": null
+   },
+   {
+    "t": "+9 Strength",
+    "c": null
+   },
+   {
+    "t": "+9 Intellect",
+    "c": null
+   },
+   {
+    "t": "Requires Level 26",
+    "c": null
+   },
+   {
+    "t": "Item Level 31",
+    "c": null
+   }
+  ]
+ },
+ "273025": {
+  "en": "Raptorclaw Greaves",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Feet · Mail",
+    "c": null
+   },
+   {
+    "t": "152 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Strength",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "+6 Intellect",
+    "c": null
+   },
+   {
+    "t": "Requires Level 26",
+    "c": null
+   },
+   {
+    "t": "Item Level 31",
+    "c": null
+   }
+  ]
+ },
+ "273028": {
+  "en": "Reliquary Mantle",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Shoulder · Mail",
+    "c": null
+   },
+   {
+    "t": "171 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Improves your chance to hit by 0.4%.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 28",
+    "c": null
+   },
+   {
+    "t": "Item Level 33",
+    "c": null
+   }
+  ]
+ },
+ "273031": {
+  "en": "Runemender's Seal",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+6 Intellect",
+    "c": null
+   },
+   {
+    "t": "+6 Spirit",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases healing done by up to 9 and damage done by up to 3 for all magical spells and effects.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 27",
+    "c": null
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "273035": {
+  "en": "Mana-Warped Chain Shirt",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": null
+   },
+   {
+    "t": "225 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Strength",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Restores 3 mana per 5 sec.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 27",
+    "c": null
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "273045": {
+  "en": "Drape of Shifting Energy",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "24 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Spirit",
+    "c": null
+   },
+   {
+    "t": "Equip: +12 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 27",
+    "c": null
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "273088": {
+  "en": "Snake Eye Kaleidoscope",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Neck",
+    "c": null
+   },
+   {
+    "t": "+1 ко всем характеристикам и сопротивлениям",
+    "c": null
+   },
+   {
+    "t": "Requires Level 17",
+    "c": null
+   },
+   {
+    "t": "Item Level 22",
+    "c": null
+   }
+  ]
+ },
+ "273647": {
+  "en": "Worgpelt Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Leather",
+    "c": null
+   },
+   {
+    "t": "84 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Agility",
+    "c": null
+   },
+   {
+    "t": "+7 Fire Resistance",
+    "c": null
+   },
+   {
+    "t": "Requires Level 21",
+    "c": null
+   },
+   {
+    "t": "Item Level 26",
+    "c": null
+   }
+  ]
+ },
+ "273841": {
+  "en": "Twilight Maul",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Mace",
+    "c": null
+   },
+   {
+    "t": "60 - 91 Damage · Speed 3.30",
+    "c": null
+   },
+   {
+    "t": "(22.88 damage per second)",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases spell damage and healing by up to 12.",
+    "c": "q2"
+   },
+   {
+    "t": "Chance on hit: Blasts a target for 70 Nature damage.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 23",
+    "c": null
+   },
+   {
+    "t": "Item Level 28",
+    "c": null
+   }
+  ]
+ },
+ "273842": {
+  "en": "Treacherous Treads",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Feet",
+    "c": null
+   },
+   {
+    "t": "145 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases all threat generated by 1%.",
+    "c": "q2"
+   }
+  ]
+ },
+ "274078": {
+  "en": "Boar Signet",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": null
+   },
+   {
+    "t": "+5 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases your chance to block attacks with a shield by 1%.",
+    "c": "q2"
+   },
+   {
+    "t": "Item Level 32",
+    "c": null
+   }
+  ]
+ },
+ "274161": {
+  "en": "Quillord Mail Leggings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Mail",
+    "c": null
+   },
+   {
+    "t": "202 Armor",
+    "c": null
+   },
+   {
+    "t": "+11 Stamina",
+    "c": null
+   },
+   {
+    "t": "+8 Spirit",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases your chance to block attacks with a shield by 2%.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Item Level 34",
+    "c": null
+   }
+  ]
+ },
+ "274290": {
+  "en": "Painwalker Buckler",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Off Hand · Shield",
+    "c": null
+   },
+   {
+    "t": "738 Armor",
+    "c": null
+   },
+   {
+    "t": "16 Block",
+    "c": null
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases healing done by up to 13 and damage done by up to 5 for all magical spells and effects.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: 17% chance when struck in combat to gain 12 mana per 5 sec for 10 sec.",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 29",
+    "c": null
+   },
+   {
+    "t": "Item Level 34",
+    "c": null
+   }
+  ]
+ },
+ "274291": {
+  "en": "Polished Skullcap",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Mail",
+    "c": null
+   },
+   {
+    "t": "193 Armor",
+    "c": null
+   },
+   {
+    "t": "+7 Strength",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "+14 Shadow Resistance",
+    "c": null
+   },
+   {
+    "t": "Requires Level 31",
+    "c": null
+   },
+   {
+    "t": "Item Level 36",
+    "c": null
+   }
+  ]
+ },
+ "276895": {
+  "en": "Transformative Cocoon",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Trinket",
+    "c": null
+   },
+   {
+    "t": "Use: Absorb up to 260 to 300 damage and Stun yourself for 5 sec. When the Stun expires, gain 60% increased movement speed for 8 sec. (5 Min Cooldown)",
+    "c": "q2"
+   }
+  ]
+ },
+ "280805": {
+  "en": "Serrated Raptor Claw",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "One-Hand · Dagger",
+    "c": null
+   },
+   {
+    "t": "24 - 45 Damage · Speed 1.60",
+    "c": null
+   },
+   {
+    "t": "(21.56 damage per second)",
+    "c": null
+   },
+   {
+    "t": "+5 Agility",
+    "c": null
+   },
+   {
+    "t": "Equip: +10 Attack Power.",
+    "c": "q2"
+   },
+   {
+    "t": "Item Level 33",
+    "c": null
+   }
+  ]
+ },
+ "281265": {
+  "en": "Roadwatcher's Confidence",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Neck",
+    "c": null
+   },
+   {
+    "t": "+3 Spirit",
+    "c": null
+   }
+  ]
+ },
+ "281284": {
+  "en": "Howlhide Vest",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Chest · Leather",
+    "c": null
+   },
+   {
+    "t": "58 Armor",
+    "c": null
+   },
+   {
+    "t": "+2 Agility",
+    "c": null
+   },
+   {
+    "t": "Item Level 11",
+    "c": null
+   }
+  ]
+ },
+ "286981": {
+  "en": "Death Bindings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Wrist",
+    "c": null
+   },
+   {
+    "t": "82 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+2 Spirit",
+    "c": null
+   }
+  ]
+ }
+}

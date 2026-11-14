@@ -1,0 +1,23 @@
+name: Добавить персонажа
+description: Добавить персонажа в журнал. Данные подтянутся из armory автоматически.
+title: "[add] "
+body:
+  - type: input
+    id: name
+    attributes: { label: Имя, description: "Как в игре, например Radi" }
+    validations: { required: true }
+  - type: input
+    id: surname
+    attributes: { label: Фамилия, description: "В WoW Forever у персонажа имя и фамилия" }
+  - type: dropdown
+    id: region
+    attributes: { label: Регион, options: [eu, us] }
+  - type: input
+    id: owner
+    attributes: { label: Игрок, description: "Чей персонаж: имя или ник друга" }
+  - type: input
+    id: cls
+    attributes: { label: Класс, description: "Необязательно: пригодится, пока персонажа нет в armory" }
+  - type: input
+    id: level
+    attributes: { label: Уровень, description: "Необязательно: armory показывает персонажей с 10 уровня" }
