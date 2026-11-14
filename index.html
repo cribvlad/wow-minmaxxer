@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Походный журнал WoW Forever</title>
+<meta name="description" content="Персонажи пати в WoW Forever: экипировка, таланты, где качаться и план подземелий.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="site.css">
+<script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: false, iconSize: "small" };</script>
+<script src="https://wow.zamimg.com/js/tooltips.js" async></script>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <svg viewBox="0 0 760 200" role="img" aria-label="Сумеречные горы, парящий остров и дирижабль">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#170e2b"/><stop offset=".45" stop-color="#5a2848"/><stop offset=".8" stop-color="#d56a28"/><stop offset="1" stop-color="#f3b24c"/></linearGradient>
+        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120e0b" stop-opacity="0"/><stop offset="1" stop-color="#120e0b" stop-opacity=".92"/></linearGradient>
+      </defs>
+      <rect width="760" height="200" fill="url(#sky)"/>
+      <g fill="#fff3cf"><circle cx="70" cy="26" r="1.2"/><circle cx="210" cy="18" r="1"/><circle cx="330" cy="34" r="1.3"/><circle cx="520" cy="20" r="1"/><circle cx="700" cy="30" r="1.2"/><circle cx="455" cy="12" r=".9"/></g>
+      <circle cx="610" cy="58" r="26" fill="#ffe7ad"/><circle cx="610" cy="58" r="40" fill="#ffe7ad" opacity=".12"/>
+      <polygon points="0,150 80,92 150,132 230,72 320,136 400,96 480,140 560,86 650,130 720,102 760,120 760,200 0,200" fill="#3b2342"/>
+      <g><polygon points="112,70 214,70 190,92 166,112 142,94" fill="#2a1a31"/><polygon points="130,70 138,50 146,70" fill="#1c3324"/><polygon points="150,70 160,44 170,70" fill="#1c3324"/><polygon points="176,70 184,54 192,70" fill="#1c3324"/><path d="M168 92v34" stroke="#bfe6ff" stroke-width="2" opacity=".7"/></g>
+      <g class="ship"><ellipse cx="410" cy="62" rx="36" ry="12" fill="#7a2c1c"/><path d="M374 62h72" stroke="#ffd100" stroke-width="1.5"/><path d="M392 73l6 8M428 73l-6 8" stroke="#1c120c" stroke-width="1.5"/><rect x="394" y="80" width="32" height="7" rx="2" fill="#24140c"/></g>
+      <path d="M0 172Q120 124 240 166T480 160T760 150V200H0Z" fill="#24152a"/>
+      <g fill="#150d14"><polygon points="40,186 52,150 64,186"/><polygon points="64,188 74,160 84,188"/><polygon points="660,180 674,140 688,180"/><polygon points="690,184 700,156 710,184"/><polygon points="560,186 568,164 576,186"/></g>
+      <rect y="90" width="760" height="110" fill="url(#fade)"/>
+    </svg>
+    <div class="txt">
+      <h1>Походный журнал</h1>
+      <p class="sub">WoW Forever · EU PvP · Орда. Персонажи пати, вещи, таланты и план подземелий.</p>
+    </div>
+  </header>
+  <nav class="chips" id="nav" aria-label="Персонажи и план"></nav>
+  <div id="app"><div class="panel"><p class="sub">Загружаю журнал…</p></div></div>
+  <footer id="foot"></footer>
+</main>
+<script src="js/icons.js"></script>
+<script src="js/kb.js"></script>
+<script src="js/items.js"></script>
+<script src="js/talents.js"></script>
+<script src="js/chars.js"></script>
+<script src="js/plan.js"></script>
+<script src="js/prof.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
