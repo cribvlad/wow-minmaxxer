@@ -20,12 +20,13 @@ window.PLAN = {
       quests: [
         ["Changing Tastes","Borstan, Оргриммар","4 Thicket Raptor Meat с ящеров в Stalker's Thicket, за первым боссом","Serrated Raptor Claw (кинжал, паладину не нужен)"],
         ["Open the Maw","Deathstalker Agent, Болотина (после Dragonmaw Rumors)","Убить 2 Dragonmaw Saboteur и 4 Dragonmaw Warder, забрать Dragonmaw Dispatch с Dragonmaw Thaumaturgist","Кожа и ткань на запястья; ради опыта"],
-        ["Elder Knowledge → Earthen Echo","Titan Relic с Relic Guardian → Bashana Runetotem, Громовой Утес 70.8 33.7 → Muln Earthfury, Плато Небесного Дозора 33.4 22.5","Отнести реликвию","Furs of the Earthen Ring; по подборке timesaver для друида там же Heavehammer"]
+        ["Elder Knowledge → Earthen Echo","Titan Relic с Relic Guardian → Bashana Runetotem, Громовой Утес 70.8 33.7 → Muln Earthfury, Плато Небесного Дозора 33.4 22.5","Отнести реликвию","Furs of the Earthen Ring или двуручный Heavehammer: +32 к силе атаки, хороший вариант для паладина"]
       ],
       loot: [
         ["Saltscale Girdle","Saltspine","Кольчужный пояс +9 Сила: закрывает самый слабый слот (Stormbringer Belt, 20)"],
         ["Raptorclaw Greaves","Shadetooth","Ботинки +7 Сила +7 Выносливость; сравни с Treacherous Treads"],
-        ["Reliquary Mantle","Relic Guardian","Плечи для танка: Выносливость и меткость"]
+        ["Reliquary Mantle","Relic Guardian","Плечи для танка: Выносливость и меткость"],
+        ["Heavehammer","Квест Earthen Echo","Двуручный молот с +32 к силе атаки: урон как у Combatant Claymore, но статы под Воздаяние"]
       ],
       tips: "Опаснее всего Shadetooth: неподготовленная пати на нем ложится. Saltspine можно оглушать и замедлять."
     },
@@ -46,7 +47,7 @@ window.PLAN = {
         ["Heart of Disruption","Image of Archmage Modera","Arcane Mote с последнего босса Shade of the Archmage; портал открывает Archmage Modera у Аметистовой цитадели","Battle Spaulders (кольчуга), Enchanted Sandals или Striking Staff"]
       ],
       loot: [
-        ["Guardian's Dualblade","Unstable Sentinel","Двуручный топор"],
+        ["Guardian's Dualblade","Unstable Sentinel","Двуручный топор; характеристик в открытых источниках пока нет"],
         ["Mana-Warped Chain Shirt","Arcane Anomaly","Кольчужная грудь; у тебя сейчас слабая Mutant Scale Breastplate (23)"],
         ["Drape of Shifting Energy","Arcanic Enigma","Плащ вместо Sporid Cape (22)"],
         ["Refractory Scaleguards","Unstable Sentinel","Кольчужные штаны"],

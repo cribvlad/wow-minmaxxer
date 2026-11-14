@@ -10,16 +10,15 @@
     hands: "Кисти", waist: "Пояс", legs: "Ноги", feet: "Ступни", finger1: "Кольцо", finger2: "Кольцо",
     trinket1: "Аксессуар", trinket2: "Аксессуар", mainhand: "Оружие", offhand: "Левая рука" };
 
-  /* ---------- предметы и всплывающие карточки Wowhead ---------- */
-  function item(name, extra) {
+  /* ---------- предметы: свои карточки ---------- */
+  const DB = window.ITEMDB || {};
+  function item(name) {
     if (!name) return '<span class="empty-slot">пусто</span>';
-    const id = (window.ITEMS || {})[name];
-    const href = id ? "https://www.wowhead.com/forever/item=" + id
-      : "https://www.wowhead.com/forever/search?q=" + encodeURIComponent(name);
-    return '<a class="item' + (id ? "" : " noid") + '" href="' + href + '" target="_blank" rel="noopener"' +
-      (id ? "" : ' title="Карточки нет: ID предмета еще не найден"') + ">" + esc(name) + "</a>" + (extra || "");
+    const d = DB[name];
+    if (!d) return '<span class="itm-plain">' + esc(name) + "</span>";
+    return '<button type="button" class="itm q' + (d.q || 0) + '" data-iname="' + esc(name) + '">' + esc(name) + "</button>";
   }
-  const NAMES = Object.keys(window.ITEMS || {}).sort((a, b) => b.length - a.length);
+  const NAMES = Object.keys(DB).sort((a, b) => b.length - a.length);
   function linkify(text) {
     let out = esc(text);
     NAMES.forEach(n => {
@@ -28,8 +27,24 @@
     });
     return out.replace(/\u0000([^\u0001]+)\u0001/g, (m, n) => item(n));
   }
-  function refreshTooltips() {
-    try { window.$WowheadPower && window.$WowheadPower.refreshLinks(); } catch (e) {}
+  function refreshTooltips() {}
+  const QN = { 1: "Обычный", 2: "Необычный", 3: "Редкий", 4: "Эпический" };
+  function itemTip(name) {
+    const d = DB[name] || {};
+    let h = '<div class="tt-name q' + (d.q || 0) + '">' + esc(name) + "</div>";
+    if (d.bind) h += '<div class="tt-line">' + esc(d.bind) + "</div>";
+    h += '<div class="tt-row"><span>' + esc(d.slot || "") + "</span><span>" + esc(d.type || "") + "</span></div>";
+    if (d.dmg) h += '<div class="tt-row"><span>Урон ' + esc(d.dmg) + "</span><span>Скорость " + esc(d.speed) + '</span></div><div class="tt-line">(' + esc(d.dps) + " урона в секунду)</div>";
+    if (d.armor) h += '<div class="tt-line">Броня: ' + d.armor + "</div>";
+    if (d.block) h += '<div class="tt-line">Блок: ' + d.block + "</div>";
+    (d.stats || []).forEach(x => h += '<div class="tt-line">' + esc(x) + "</div>");
+    (d.fx || []).forEach(x => h += '<div class="tt-fx">' + esc(x) + "</div>");
+    if (d.set) h += '<div class="tt-set">Комплект Scarlet: бонусы за 2–6 предметов (сопротивление тьме, сила атаки против нежити, меткость, щит при низком здоровье)</div>';
+    if (d.req) h += '<div class="tt-line">Требуется уровень: ' + d.req + "</div>";
+    if (d.ilvl) h += '<div class="tt-dim">Уровень предмета ' + d.ilvl + "</div>";
+    if (d.nodata) h += '<div class="tt-dim">Подробных характеристик пока нет в открытых источниках.</div>';
+    else if (!d.q) h += '<div class="tt-dim">Качество не подтверждено.</div>';
+    return h;
   }
 
   /* ---------- свои карточки талантов ---------- */
@@ -37,7 +52,7 @@
   tip.className = "tt"; tip.setAttribute("role", "tooltip"); tip.hidden = true;
   document.body.appendChild(tip);
   function showTip(el) {
-    tip.innerHTML = '<div class="tt-name">' + esc(el.dataset.name) + '</div><div class="tt-rank">' + esc(el.dataset.rank) +
+    tip.innerHTML = el.dataset.iname ? itemTip(el.dataset.iname) : '<div class="tt-name">' + esc(el.dataset.name) + '</div><div class="tt-rank">' + esc(el.dataset.rank) +
       '</div><div class="tt-desc">' + esc(el.dataset.desc) + "</div>";
     tip.hidden = false;
     const r = el.getBoundingClientRect(), w = Math.min(300, innerWidth - 24);
@@ -48,13 +63,13 @@
     tip.style.left = x + "px"; tip.style.top = y + "px";
   }
   function hideTip() { tip.hidden = true; }
-  document.addEventListener("mouseover", e => { const t = e.target.closest(".tnode"); if (t) showTip(t); });
-  document.addEventListener("mouseout", e => { if (e.target.closest(".tnode")) hideTip(); });
-  document.addEventListener("focusin", e => { const t = e.target.closest(".tnode"); if (t) showTip(t); });
-  document.addEventListener("focusout", e => { if (e.target.closest(".tnode")) hideTip(); });
+  document.addEventListener("mouseover", e => { const t = e.target.closest(".tnode,.itm"); if (t) showTip(t); });
+  document.addEventListener("mouseout", e => { if (e.target.closest(".tnode,.itm")) hideTip(); });
+  document.addEventListener("focusin", e => { const t = e.target.closest(".tnode,.itm"); if (t) showTip(t); });
+  document.addEventListener("focusout", e => { if (e.target.closest(".tnode,.itm")) hideTip(); });
   document.addEventListener("click", e => {
-    const t = e.target.closest(".tnode");
-    if (t) { e.preventDefault(); if (tip.hidden) showTip(t); else hideTip(); } else hideTip();
+    const t = e.target.closest(".tnode,.itm");
+    if (t) { e.preventDefault(); showTip(t); } else hideTip();
   });
   addEventListener("scroll", hideTip, { passive: true });
 
@@ -244,7 +259,7 @@
   const srcs = (typeof SOURCES !== "undefined" ? SOURCES : []).concat([["timesaver.gg: вещи по уровням", "https://timesaver.gg/tools/wow-forever/leveling-gear"],
     ["Warcraft Tavern: квесты подземелий", "https://www.warcrafttavern.com/forever/guides/dungeons/"], ["Method: гайды подземелий", "https://www.method.gg/wow-forever/dungeons/city-of-dalaran"]]);
   $("#foot").innerHTML = "<span>Источники: " + srcs.map(s => '<a href="' + s[1] + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a>").join(" · ") + "</span>" +
-    '<span>Карточки предметов — <a href="https://www.wowhead.com/forever" target="_blank" rel="noopener">Wowhead</a>. Деревья и описания талантов — WoW Forever (CC BY 4.0) через <a href="https://wow-classic-premium.com/en/forever/armory" target="_blank" rel="noopener">wow-classic-premium.com</a>.</span>' +
+    '<span>Характеристики предметов — armory wow-classic-premium.com и подсказки Wowhead. Деревья и описания талантов — WoW Forever (CC BY 4.0) через <a href="https://wow-classic-premium.com/en/forever/armory" target="_blank" rel="noopener">wow-classic-premium.com</a>.</span>' +
     "<span>Фан-страница, не связана с Blizzard Entertainment. Обновлено 14.11.2026.</span>";
   route();
 })();

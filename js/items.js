@@ -38,9 +38,10 @@ window.ITEMS = {
 
 /* Цели по вещам: [класс, уровень от, до, слот, предмет, откуда] */
 window.TARGETS = [
-  ["paladin",28,35,"Оружие","Corpsemaker","Лабиринты Иглошкурых, Overlord Ramtusk. Сравни с Combatant Claymore по урону в секунду"],
+  ["paladin",28,35,"Оружие","Corpsemaker","Лабиринты Иглошкурых, Overlord Ramtusk. Больше урона, чем у Combatant Claymore, и +15 Силы вместо Духа"],
+  ["paladin",28,35,"Оружие","Heavehammer","Квест Earthen Echo после Раскопок: +32 к силе атаки"],
   ["paladin",28,35,"Оружие","Guardian's Dualblade","Даларан, Unstable Sentinel"],
-  ["paladin",30,38,"Оружие","Morbid Dawn","Монастырь: Кладбище, редкий Fallen Champion"],
+  ["paladin",30,38,"Оружие","Morbid Dawn","Монастырь: Кладбище, редкий Fallen Champion. Самый высокий урон в секунду из доступных"],
   ["paladin",28,34,"Пояс","Saltscale Girdle","Раскопки, Saltspine"],
   ["paladin",32,40,"Пояс","Scarlet Belt","Монастырь, падает с мобов (BoE)"],
   ["paladin",28,36,"Шея","Ghostshard Talisman","Монастырь: Кладбище, редкий Azshir the Sleepless"],

@@ -45,3 +45,15 @@ a.item.noid{color:#c8b88f;font-weight:400;border-bottom:1px dotted var(--muted)}
 .steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .stepn{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#1c1204;font-family:var(--display);font-size:15px;flex:none}
 ul.list li > .tag{align-self:center}
+
+/* предметы: свои карточки */
+button.itm{all:unset;cursor:help;font-weight:700;border-bottom:1px dotted currentColor;overflow-wrap:anywhere}
+button.itm:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.q0,button.itm.q0{color:#c8b88f}.q1,button.itm.q1{color:#ffffff}.q2,button.itm.q2{color:#1eff00}.q3,button.itm.q3{color:#3d9bff}.q4,button.itm.q4{color:#c66bff}
+.tt-name.q1,.tt-name.q2,.tt-name.q3,.tt-name.q4,.tt-name.q0{font-weight:700;font-size:15px}
+.tt-line{color:#fff}
+.tt-row{display:flex;justify-content:space-between;gap:12px;color:#fff}
+.tt-fx{color:#1eff00}
+.tt-set{color:#ffd100;margin-top:4px}
+.tt-dim{color:#9d9d9d;margin-top:4px}
+.itm-plain{font-weight:700}
