@@ -9,7 +9,10 @@
   "manual": {
    "cls": "Paladin",
    "level": 30
-  }
+  },
+  "professions": [
+   "Mining"
+  ]
  },
  {
   "id": "rygal-hurmoy",

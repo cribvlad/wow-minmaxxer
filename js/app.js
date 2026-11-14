@@ -1,265 +1,354 @@
-/* Походный журнал WoW Forever: статичная версия для GitHub Pages. */
+/* WoW Minmaxxer — журнал пати в WoW Forever. Статичный сайт на GitHub Pages, данные в /data обновляет бот. */
 (function () {
+  const VERSION = "0.3.0";
+  const REPO = "https://github.com/cribvlad/wow-minmaxxer";
+  const KB = window.KB, PLAN = window.PLAN;
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const ls = {
-    get(k) { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } },
+    get(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d; } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   };
-  const SLOT_RU = { head: "Голова", neck: "Шея", shoulder: "Плечи", back: "Спина", chest: "Грудь", wrist: "Запястья",
-    hands: "Кисти", waist: "Пояс", legs: "Ноги", feet: "Ступни", finger1: "Кольцо", finger2: "Кольцо",
-    trinket1: "Аксессуар", trinket2: "Аксессуар", mainhand: "Оружие", offhand: "Левая рука" };
+  const st = { roster: [], chars: {}, items: {}, meta: {}, loaded: false, error: null };
+  const SLOT_RU = { head: "Голова", neck: "Шея", shoulder: "Плечи", back: "Спина", chest: "Грудь", wrist: "Запястья", hands: "Кисти",
+    waist: "Пояс", legs: "Ноги", feet: "Ступни", finger1: "Кольцо", finger2: "Кольцо", finger: "Кольцо", trinket1: "Аксессуар",
+    trinket2: "Аксессуар", mainhand: "Оружие", offhand: "Левая рука", ranged: "Дальний бой" };
+  const date = iso => { if (!iso) return "—"; const d = new Date(iso); return isNaN(d) ? iso : d.toLocaleDateString("ru-RU", { day: "numeric", month: "short" }) + ", " + d.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" }); };
 
-  /* ---------- предметы: свои карточки ---------- */
-  const DB = window.ITEMDB || {};
-  function item(name) {
-    if (!name) return '<span class="empty-slot">пусто</span>';
-    const d = DB[name];
-    if (!d) return '<span class="itm-plain">' + esc(name) + "</span>";
-    return '<button type="button" class="itm q' + (d.q || 0) + '" data-iname="' + esc(name) + '">' + esc(name) + "</button>";
+  /* ---------- названия и предметы ---------- */
+  const ruOf = it => it && it.ru && !/^\[/.test(it.ru) && it.ru !== it.en ? it.ru : null;
+  function itemChip(id, fallbackName) {
+    const it = st.items[id];
+    if (!it) return '<span class="itm-plain">' + esc(fallbackName || "предмет #" + id) + "</span>";
+    const ru = ruOf(it);
+    return '<button type="button" class="itm q' + (it.q ?? 0) + '" data-iid="' + id + '">' + esc(it.en) +
+      (ru ? ' <span class="ru">(' + esc(ru) + ")</span>" : "") + "</button>";
   }
-  const NAMES = Object.keys(DB).sort((a, b) => b.length - a.length);
-  function linkify(text) {
-    let out = esc(text);
-    NAMES.forEach(n => {
-      const en = esc(n);
-      if (out.includes(en)) out = out.split(en).join("\u0000" + n + "\u0001");
-    });
-    return out.replace(/\u0000([^\u0001]+)\u0001/g, (m, n) => item(n));
+  function fmt(text) {
+    return esc(text).replace(/\{\{([^}]+)\}\}/g, (m, n) => esc(window.w(n.replace(/&#39;/g, "'").replace(/&amp;/g, "&"))))
+      .replace(/\[\[(\d+)\]\]/g, (m, id) => itemChip(+id));
   }
-  function refreshTooltips() {}
-  const QN = { 1: "Обычный", 2: "Необычный", 3: "Редкий", 4: "Эпический" };
-  function itemTip(name) {
-    const d = DB[name] || {};
-    let h = '<div class="tt-name q' + (d.q || 0) + '">' + esc(name) + "</div>";
-    if (d.bind) h += '<div class="tt-line">' + esc(d.bind) + "</div>";
-    h += '<div class="tt-row"><span>' + esc(d.slot || "") + "</span><span>" + esc(d.type || "") + "</span></div>";
-    if (d.dmg) h += '<div class="tt-row"><span>Урон ' + esc(d.dmg) + "</span><span>Скорость " + esc(d.speed) + '</span></div><div class="tt-line">(' + esc(d.dps) + " урона в секунду)</div>";
-    if (d.armor) h += '<div class="tt-line">Броня: ' + d.armor + "</div>";
-    if (d.block) h += '<div class="tt-line">Блок: ' + d.block + "</div>";
-    (d.stats || []).forEach(x => h += '<div class="tt-line">' + esc(x) + "</div>");
-    (d.fx || []).forEach(x => h += '<div class="tt-fx">' + esc(x) + "</div>");
-    if (d.set) h += '<div class="tt-set">Комплект Scarlet: бонусы за 2–6 предметов (сопротивление тьме, сила атаки против нежити, меткость, щит при низком здоровье)</div>';
-    if (d.req) h += '<div class="tt-line">Требуется уровень: ' + d.req + "</div>";
-    if (d.ilvl) h += '<div class="tt-dim">Уровень предмета ' + d.ilvl + "</div>";
-    if (d.nodata) h += '<div class="tt-dim">Подробных характеристик пока нет в открытых источниках.</div>';
-    else if (!d.q) h += '<div class="tt-dim">Качество не подтверждено.</div>';
-    return h;
-  }
+  function itemLines(id) { const it = st.items[id]; return it ? it.lines || [] : []; }
+  function itemIlvl(id) { const l = itemLines(id).find(x => /^Item Level \d+/.test(x.t)); return l ? +l.t.match(/\d+/)[0] : null; }
 
-  /* ---------- свои карточки талантов ---------- */
+  /* ---------- всплывающие карточки ---------- */
   const tip = document.createElement("div");
-  tip.className = "tt"; tip.setAttribute("role", "tooltip"); tip.hidden = true;
-  document.body.appendChild(tip);
+  tip.className = "tt"; tip.setAttribute("role", "tooltip"); tip.hidden = true; document.body.appendChild(tip);
+  function tipHtml(el) {
+    if (el.dataset.iid) {
+      const it = st.items[el.dataset.iid] || {};
+      return '<div class="tt-name q' + (it.q ?? 0) + '">' + esc(it.en) + "</div>" + (ruOf(it) ? '<div class="tt-ru">' + esc(ruOf(it)) + "</div>" : "") +
+        (it.lines || []).map(l => '<div class="' + (l.c === "q2" ? "tt-fx" : /^(Dropped by|Drop Chance|Item Level)/.test(l.t) ? "tt-dim" : "tt-line") + '">' + esc(l.t) + "</div>").join("");
+    }
+    return '<div class="tt-name">' + esc(el.dataset.name) + '</div><div class="tt-dim">' + esc(el.dataset.rank) + '</div><div class="tt-desc">' + esc(el.dataset.desc) + "</div>";
+  }
   function showTip(el) {
-    tip.innerHTML = el.dataset.iname ? itemTip(el.dataset.iname) : '<div class="tt-name">' + esc(el.dataset.name) + '</div><div class="tt-rank">' + esc(el.dataset.rank) +
-      '</div><div class="tt-desc">' + esc(el.dataset.desc) + "</div>";
-    tip.hidden = false;
+    tip.innerHTML = tipHtml(el); tip.hidden = false;
     const r = el.getBoundingClientRect(), w = Math.min(300, innerWidth - 24);
     tip.style.width = w + "px";
-    let x = r.left + r.width / 2 - w / 2; x = Math.max(12, Math.min(innerWidth - w - 12, x));
-    let y = r.bottom + 8; const h = tip.offsetHeight;
-    if (y + h > innerHeight - 8) y = Math.max(8, r.top - h - 8);
+    let x = Math.max(12, Math.min(innerWidth - w - 12, r.left + r.width / 2 - w / 2)), y = r.bottom + 8;
+    if (y + tip.offsetHeight > innerHeight - 8) y = Math.max(8, r.top - tip.offsetHeight - 8);
     tip.style.left = x + "px"; tip.style.top = y + "px";
   }
-  function hideTip() { tip.hidden = true; }
-  document.addEventListener("mouseover", e => { const t = e.target.closest(".tnode,.itm"); if (t) showTip(t); });
-  document.addEventListener("mouseout", e => { if (e.target.closest(".tnode,.itm")) hideTip(); });
-  document.addEventListener("focusin", e => { const t = e.target.closest(".tnode,.itm"); if (t) showTip(t); });
-  document.addEventListener("focusout", e => { if (e.target.closest(".tnode,.itm")) hideTip(); });
-  document.addEventListener("click", e => {
-    const t = e.target.closest(".tnode,.itm");
-    if (t) { e.preventDefault(); showTip(t); } else hideTip();
-  });
+  const hideTip = () => { tip.hidden = true; };
+  const tipTarget = e => e.target.closest && e.target.closest(".tnode,.itm");
+  document.addEventListener("mouseover", e => { const t = tipTarget(e); if (t) showTip(t); });
+  document.addEventListener("mouseout", e => { if (tipTarget(e)) hideTip(); });
+  document.addEventListener("focusin", e => { const t = tipTarget(e); if (t) showTip(t); });
+  document.addEventListener("focusout", e => { if (tipTarget(e)) hideTip(); });
+  document.addEventListener("click", e => { const t = tipTarget(e); if (t) { e.preventDefault(); showTip(t); } else hideTip(); });
   addEventListener("scroll", hideTip, { passive: true });
 
-  function talentTrees(c) {
-    const T = c.snapshot && c.snapshot.talents, trees = T && window.TREES[T.tree];
-    if (!trees) return "";
-    const ranks = T.ranks || {};
-    const best = trees.slice().sort((a, b) => (T.points[b.key] || 0) - (T.points[a.key] || 0))[0].key;
-    const sel = ls.get("wowj.tree." + c.id) || best;
-    const tabs = '<div class="tabs">' + trees.map(tr => '<button data-tree="' + tr.key + '" data-c="' + c.id + '" aria-pressed="' + (tr.key === sel) + '">' +
-      esc(tr.name) + " " + (T.points[tr.key] != null ? T.points[tr.key] : "?") + "</button>").join("") + "</div>";
-    const html = tabs + trees.filter(tr => tr.key === sel).map(tr => {
-      const known = T.points[tr.key] != null;
-      const nodes = tr.nodes.map(n => {
-        const [r, col, max, name, desc] = n;
-        const have = ranks[name] || 0;
-        const label = known ? have + "/" + max : "?/" + max;
-        const cls = known ? (have >= max ? "full" : have > 0 ? "part" : "none") : "unk";
-        return '<button type="button" class="tnode ' + cls + '" style="grid-row:' + (r + 1) + ";grid-column:" + (col + 1) +
-          '" data-name="' + esc(name) + '" data-rank="Ранг ' + esc(label) + '" data-desc="' + esc(desc) + '" aria-label="' +
-          esc(name + ", " + label) + '"><span class="tglyph">' + esc(name.split(/\s+/).map(w => w[0]).join("").slice(0, 2)) +
-          '</span><span class="trank">' + esc(label) + "</span></button>";
-      }).join("");
-      return '<div class="ttree"><div class="ttree-h">' + esc(tr.name) + ' <span class="sub">' +
-        (known ? T.points[tr.key] + " очков" : "не подтверждено") + '</span></div><div class="tgrid">' + nodes + "</div></div>";
-    }).join("");
-    return '<details class="talents" open><summary>Таланты</summary><div class="ttrees">' + html +
-      '</div><p class="sub">Наведи или нажми на талант. Описания на английском, как в игре.</p></details>';
+  /* ---------- модель персонажа ---------- */
+  function model(entry) {
+    const c = st.chars[entry.id] || {}, m = entry.manual || {};
+    const clsEn = c.cls || m.cls || "";
+    const key = Object.keys(KB.CLASSES).find(k => KB.CLASSES[k].en === clsEn) || "";
+    return { id: entry.id, entry, data: c, name: c.fullName || (entry.name + " " + entry.surname).trim(), owner: entry.owner,
+      level: c.level || m.level || null, clsEn, cls: key, race: c.race || m.race || "", faction: c.faction || "Horde",
+      found: c.status === "ok", spec: m.spec, gear: c.gear || [], talents: c.talents || [], stats: c.stats || {}, history: c.history || [] };
   }
+  const party = () => st.roster.map(model);
 
-  /* ---------- расчеты (из базы знаний kb.js) ---------- */
-  const faction = c => (RACES[c.race] && RACES[c.race].f) || "H";
-  function zonesFor(c) {
-    const L = c.level, f = faction(c);
-    return ZONES.filter(z => (z[3] === "*" || z[3] === f) && L >= z[1] && L <= z[2]).map(z => {
-      const pos = (L - z[1]) / (z[2] - z[1]);
-      let name = z[0]; if (name.startsWith("Стартовая") && RACES[c.race]) name = RACES[c.race].start + " (стартовая зона)";
-      return { name, min: z[1], max: z[2], hint: pos < 0.34 ? "самое время заходить" : pos < 0.75 ? "основная зона" : "добивать желтые квесты" };
-    }).sort((a, b) => b.min - a.min);
-  }
-  const dungeonsFor = c => DUNGEONS.filter(d => c.level >= d[1] - 1 && c.level <= d[2]);
-  const milesFor = c => { const f = faction(c); return MILES.filter(m => (!m[2] || m[2] === c.cls) && (!m[3] || m[3] === f)).sort((a, b) => a[1] - b[1]); };
-  const doneKey = c => "wowj.done." + c.id;
-
-  function assess(c) {
-    const checks = [], s = c.snapshot;
-    if (s) {
-      const d = s.ilvl - c.level;
-      checks.push({ k: d >= -4 ? "good" : d >= -8 ? "warn" : "bad", t: "Средний уровень предметов " + s.ilvl + " при " + c.level + " уровне" });
-      const weak = s.gear.filter(g => g[1] && g[2] && g[2] <= c.level - 8).map(g => SLOT_RU[g[0]].toLowerCase());
-      if (weak.length) checks.push({ k: "warn", t: "Отстают: " + weak.join(", ") });
-      const empty = s.gear.filter(g => !g[1]).map(g => SLOT_RU[g[0]].toLowerCase());
-      if (empty.length) checks.push({ k: "bad", t: "Пусто: " + empty.join(", ") });
-      const T = s.talents;
-      if (T) { const sum = Object.values(T.points).reduce((a, b) => a + (b || 0), 0), exp = Math.max(0, c.level - 9);
-        if (sum < exp && Object.values(T.points).every(v => v != null)) checks.push({ k: "warn", t: "Не потрачено талантов: " + (exp - sum) });
-        else if (sum < exp) checks.push({ k: "warn", t: "Таланты: видно " + sum + " из " + exp + ", проверь в игре" }); }
+  function changes(ch) {
+    const h = ch.history; if (h.length < 2) return [];
+    const a = h[h.length - 2], b = h[h.length - 1], out = [];
+    if (a.level && b.level && b.level !== a.level) out.push("уровень " + a.level + " → " + b.level);
+    if (a.gs && b.gs && b.gs !== a.gs) out.push("GearScore " + a.gs + " → " + b.gs);
+    if (a.gear && a.gear.length) {
+      const neu = (b.gear || []).filter(id => !a.gear.includes(id));
+      if (neu.length) out.push("новое: " + neu.map(id => itemChip(id, (ch.gear.find(g => g.id === id) || {}).name)).join(", "));
     }
-    const pn = (c.professions || []).filter(p => (window.PRIMARY || []).includes(p)).length;
-    if (c.level >= 5 && pn < 2) checks.push({ k: "warn", t: pn ? "Свободен слот второй основной профессии" : "Основные профессии не указаны" });
-    const done = ls.get(doneKey(c)) || {}, ms = milesFor(c).filter(m => m[1] <= c.level), n = ms.filter(m => done[m[0]]).length;
-    return { checks, n, total: ms.length, pct: ms.length ? Math.round(n / ms.length * 100) : 0 };
+    return out;
   }
 
-  /* ---------- разделы ---------- */
-  function headerCard(c) {
-    const cl = CLASSES[c.cls] || { ru: c.cls, color: "#888" }, s = c.snapshot;
-    let h = '<section class="panel"><div class="head"><div><div class="name">' + ico(c.cls, cl.color, "big") + "<span>" +
-      esc(c.first + " " + c.last) + '<div class="sub" style="font-family:var(--body)">игрок: ' + esc(c.owner) + "</div></span></div>" +
-      '<div class="row" style="margin-top:8px"><span class="tag" style="border-color:' + cl.color + ';color:var(--ink)">' + esc(cl.ru) + "</span>" +
-      '<span class="tag">' + esc((RACES[c.race] || {}).ru || "") + '</span><span class="tag">' + esc(c.region.toUpperCase() + " · " + c.rules) + "</span></div></div>" +
-      '<div class="lvl"><b>' + c.level + "</b></div></div>";
-    h += s ? '<p class="sub">Снимок armory от ' + esc(s.date) + " · GearScore " + s.gs + " · средний уровень предметов " + s.ilvl +
-      (c.armory ? ' · <a href="' + esc(c.armory) + '" target="_blank" rel="noopener">armory</a>' : "") + "</p>"
-      : '<p class="sub">Снимка armory пока нет: профиль появляется с 10 уровня после выхода из игры, данные журнала вписаны вручную.</p>';
-    return h + "</section>";
+  /* ---------- рекомендации ---------- */
+  function zonesFor(level, faction) {
+    const f = faction === "Alliance" ? "A" : "H";
+    return KB.ZONES.filter(z => (z[3] === "*" || z[3] === f) && level >= z[1] && level <= z[2]);
   }
-  function gearCard(c) {
-    const s = c.snapshot; if (!s) return "";
-    const rows = s.gear.map(g => '<li class="slot"><span class="slot-n">' + SLOT_RU[g[0]] + "</span>" + item(g[1]) +
-      (g[2] ? '<span class="rng">' + g[2] + "</span>" : "") + "</li>").join("");
-    const st = s.stats, stat = (l, v) => '<div class="stat"><span>' + l + "</span><b>" + v + "</b></div>";
-    return '<section class="panel"><h2>' + sic("gear") + 'Экипировка</h2><ul class="gear-list">' + rows + "</ul>" +
-      '<div class="stats">' + stat("Здоровье", st.hp) + stat("Сила", st.str) + stat("Ловкость", st.agi) + stat("Выносливость", st.sta) +
-      stat("Интеллект", st.int) + stat("Дух", st.spi) + stat("Броня", st.armor) + stat("Сила атаки", st.ap) +
-      (st.crit ? stat("Крит", st.crit) : "") + (st.dps ? stat("Урон в сек.", st.dps) : "") + "</div>" + talentTrees(c) + "</section>";
+  function isTwoHander(ch) {
+    const mh = ch.gear.find(g => g.slot === "mainhand");
+    return !!(mh && mh.id && itemLines(mh.id).some(l => /Two-Hand/.test(l.t)));
   }
-  function assessCard(c) {
-    const a = assess(c);
-    return '<section class="panel"><h2>' + sic("assess") + 'Оценка состояния</h2><div class="row"><span class="score">' + a.n + " из " + a.total +
-      '</span><span class="sub">вех к ' + c.level + ' уровню отмечено</span></div><div class="meter"><i style="width:' + a.pct + '%"></i></div>' +
-      (a.checks.length ? '<div class="row">' + a.checks.map(x => '<span class="tag ' + x.k + '">' + esc(x.t) + "</span>").join("") + "</div>" : "") +
-      '<p class="sub">Отметки вех хранятся только в твоем браузере.</p></section>';
+  function upgradesFor(ch, limit) {
+    const worn = new Set(ch.gear.map(g => g.id)), slotIl = {}, twoH = isTwoHander(ch);
+    ch.gear.forEach(g => { slotIl[g.slot] = g.ilvl || 0; });
+    const cur = s => s === "finger" ? Math.min(slotIl.finger1 || 0, slotIl.finger2 || 0) : (slotIl[s] || 0);
+    return KB.TARGETS.filter(t => t[0] === ch.cls && ch.level && ch.level >= t[1] - 2 && ch.level <= t[2] && !worn.has(t[4]) && !(twoH && t[3] === "offhand"))
+      .map(t => {
+        const il = itemIlvl(t[4]) || 0, delta = ch.found ? il - cur(t[3]) : null;
+        const score = ch.found ? delta + (t[3] === "mainhand" ? 30 : 0) + (cur(t[3]) && cur(t[3]) <= ch.level - 8 ? 8 : 0) : -Math.abs(t[1] - ch.level);
+        return { slot: t[3], id: t[4], where: t[5], delta, score };
+      })
+      .filter(u => !ch.found || u.delta > 0 || u.slot === "mainhand")
+      .sort((a, b) => b.score - a.score).slice(0, limit || 99);
   }
-  function targetsCard(c) {
-    const t = (window.TARGETS || []).filter(x => x[0] === c.cls && c.level >= x[1] - 2 && c.level <= x[2]);
-    if (!t.length) return "";
-    const worn = new Set(((c.snapshot && c.snapshot.gear) || []).map(g => g[1]));
-    return '<section class="panel"><h2>' + sic("build") + 'Что добыть сейчас</h2><ul class="list">' + t.map(x =>
-      '<li><span><span class="sub">' + esc(x[3]) + "</span><br>" + item(x[4]) + (worn.has(x[4]) ? ' <span class="tag good">надето</span>' : "") +
-      '<br><span class="sub">' + esc(x[5]) + '</span></span><span class="rng">' + x[1] + "–" + x[2] + "</span></li>").join("") + "</ul></section>";
+  function nextDungeon(levels) {
+    const max = Math.max(...levels), done = ls.get("wmm.plan.done", {});
+    return PLAN.steps.find(s => !done[s.key] && max >= s.min - 1) || null;
   }
-  function whereCard(c) {
-    const zs = zonesFor(c), ds = dungeonsFor(c);
-    return '<section class="panel"><h2>' + sic("map") + "Где качаться на " + c.level + '</h2><ul class="list">' +
-      zs.map(z => "<li><span><b>" + esc(z.name) + '</b><br><span class="sub">' + esc(z.hint) + '</span></span><span class="rng">' + z.min + "–" + z.max + "</span></li>").join("") +
-      "</ul><h3>Подземелья</h3>" + (ds.length ? '<ul class="list">' + ds.map(d => "<li><span>" + esc(d[0]) + '<br><span class="sub">' + esc(d[3]) +
-      '</span></span><span class="rng">' + d[1] + "–" + d[2] + "</span></li>").join("") + "</ul>" : '<p class="sub">Первое подземелье с 13 уровня.</p>') + "</section>";
+
+  /* ---------- общие куски ---------- */
+  const card = (title, icon, body, extra) => '<section class="card' + (extra ? " " + extra : "") + '">' + (title ? "<h2>" + (icon ? sic(icon) : "") + esc(title) + "</h2>" : "") + body + "</section>";
+  const refreshUrl = REPO + "/issues/new?template=refresh.yml&title=" + encodeURIComponent("[refresh] статусы");
+  function refreshBlock() {
+    return '<div class="refresh"><span class="sub">Данные обновлены ' + esc(date(st.meta.updated)) + '. Бот перечитывает armory каждые 6 часов.</span>' +
+      '<a class="btn primary" href="' + refreshUrl + '" target="_blank" rel="noopener">' + sic("refresh") + "Обновить статусы</a></div>";
   }
-  function milesCard(c) {
-    const all = milesFor(c), done = ls.get(doneKey(c)) || {};
-    const now = all.filter(m => m[1] <= c.level), next = all.filter(m => m[1] > c.level).slice(0, 3);
-    return '<section class="panel"><h2>' + sic("quest") + "Квесты и вехи</h2>" +
-      now.map(m => '<label class="chk"><input type="checkbox" data-ms="' + m[0] + '" data-c="' + c.id + '" id="ms_' + c.id + "_" + m[0] + '" ' + (done[m[0]] ? "checked" : "") +
-        '><span class="' + (done[m[0]] ? "done" : "") + '">' + linkify(m[4]) + ' <span class="rng">с ' + m[1] + "</span></span></label>").join("") +
-      (next.length ? '<h3>Дальше</h3><ul class="list">' + next.map(m => "<li><span>" + linkify(m[4]) + '</span><span class="rng">с ' + m[1] + "</span></li>").join("") + "</ul>" : "") + "</section>";
+  function charBadge(ch) {
+    const k = KB.CLASSES[ch.cls] || { color: "#777" };
+    return ico(ch.cls, k.color);
   }
-  function buildCard(c) {
-    const B = BUILDS[c.cls];
-    if (!B) return '<section class="panel"><h2>Билд</h2><p class="note">Гайд по этому классу еще не собран.</p></section>';
-    const keys = Object.keys(B.specs || {}), sp = (ls.get("wowj.spec." + c.id)) || (B.specs[c.spec] ? c.spec : keys[0]);
-    let h = '<section class="panel"><h2>' + sic("build") + "Билд</h2><p>" + linkify(B.intro) + "</p>";
-    if (keys.length) {
-      const S = B.specs[sp] || B.specs[keys[0]];
-      h += '<div class="tabs">' + keys.map(k => '<button data-spec="' + k + '" data-c="' + c.id + '" aria-pressed="' + (k === sp) + '">' + esc(B.specs[k].name) + "</button>").join("") + "</div>" +
-        '<ul class="list">' + S.steps.map(st => { const cur = c.level >= st[0] && c.level <= st[1];
-          return '<li class="' + (cur ? "cur" : "") + '"><span>' + esc(st[2]) + '</span><span class="rng">' + (st[0] === st[1] ? st[0] : st[0] + "–" + st[1]) + "</span></li>"; }).join("") +
-        '</ul><p class="sub">Итог к 60: ' + esc(S.final) + ".</p>";
+
+  /* ---------- главная: сводка ---------- */
+  function homeView() {
+    const P = party();
+    if (!P.length) return card("Пати пуста", "users", '<p>Добавь первого персонажа во вкладке «Состав».</p>');
+    const levels = P.filter(c => c.level).map(c => c.level);
+    let h = refreshBlock();
+    h += '<div class="party">' + P.map(ch => {
+      const ch2 = changes(ch), k = KB.CLASSES[ch.cls] || {};
+      return '<a class="pcard" href="#c/' + ch.id + '">' + charBadge(ch) + '<div class="pmain"><div class="pname">' + esc(ch.name) +
+        '</div><div class="sub">' + esc(window.w(ch.clsEn || "?")) + " · " + esc(ch.owner || "") + '</div></div><div class="plevel">' + (ch.level || "?") + "</div>" +
+        '<div class="pfoot">' + (ch.found ? "GS " + (ch.data.gs ?? "—") + " · проверено " + esc(date(ch.data.checked)) : '<span class="warn">нет в armory, уровень вписан вручную</span>') +
+        (ch2.length ? '<div class="pchg">' + ch2.join(" · ") + "</div>" : "") + "</div></a>";
+    }).join("") + "</div>";
+
+    if (levels.length) {
+      const lo = Math.min(...levels), hi = Math.max(...levels), gap = hi - lo;
+      let zh;
+      if (gap <= 8) {
+        const zs = KB.ZONES.filter(z => z[3] !== "A" && z[0] !== "Starting zone" && z[1] <= lo + 2 && z[2] >= hi - 1);
+        zh = zs.length ? '<ul class="rows">' + zs.map(z => '<li><b>' + esc(window.w(z[0])) + '</b><span class="rng">' + z[1] + "–" + z[2] + "</span></li>").join("") + "</ul>"
+          : '<p class="sub">Общей зоны под весь разброс уровней нет.</p>';
+      } else {
+        zh = '<p class="note">Разрыв ' + gap + " уровней: качаться вместе выйдет только в подземельях. По отдельности:</p>" +
+          '<ul class="rows">' + P.filter(c => c.level).map(c => { const z = zonesFor(c.level, c.faction).filter(x => x[0] !== "Starting zone").slice(-2);
+            return "<li><span>" + esc(c.name) + '</span><span class="sub">' + esc(z.map(x => window.w(x[0])).join(", ") || "стартовая зона") + "</span></li>"; }).join("") + "</ul>";
+      }
+      const nd = nextDungeon(levels);
+      const fits = nd ? P.filter(c => c.level && c.level >= nd.min - 2 && c.level <= nd.max) : [];
+      const ndh = nd ? '<p><b>' + esc(nd.name) + '</b> <span class="rng">' + nd.min + "–" + nd.max + '</span></p><p class="sub">' + fmt(nd.where) + "</p>" +
+        '<p class="sub">Подходит: ' + (fits.map(c => esc(c.name)).join(", ") || "пока никому по уровню") + '. <a href="#plan/' + nd.key + '">Квесты и добыча →</a></p>'
+        : '<p class="sub">План подземелий пройден или пати пока слишком низкого уровня.</p>';
+      const rows = P.flatMap(ch => upgradesFor(ch, 3).map(u => ({ ch, u })));
+      const ih = rows.length ? '<ul class="loot">' + rows.map(({ ch, u }) =>
+        "<li>" + slotIco(u.slot, (st.items[u.id] || {}).q) + '<div class="lmain">' + itemChip(u.id) + '<div class="sub">' + esc(SLOT_RU[u.slot] || u.slot) +
+        (u.delta > 0 ? " · +" + u.delta + " к уровню предмета" : "") + '</div></div><div class="lwho">' + charBadge(ch) + esc(ch.name.split(" ")[0]) +
+        '</div><div class="lwhere sub">' + fmt(u.where) + "</div></li>").join("") + "</ul>"
+        : '<p class="sub">Для текущих уровней целей пока нет.</p>';
+      h += '<div class="grid2">' + card("Где качаться", "map", zh) + card("Следующее подземелье", "quest", ndh) + "</div>";
+      h += card("Самое полезное из добычи", "gear", ih);
     }
-    h += "<h3>Как играть</h3><p>" + linkify(B.play) + "</p></section>";
-    h += '<section class="panel"><h2>' + sic("gear") + 'Экипировка по уровням</h2><ul class="list">' + B.gear.map(g => { const cur = c.level >= g[0] && c.level <= g[1];
-      return '<li class="' + (cur ? "cur" : "") + '"><span>' + linkify(g[2]) + '</span><span class="rng">' + g[0] + "–" + g[1] + "</span></li>"; }).join("") + "</ul></section>";
     return h;
   }
 
-  function charView(c) {
-    return headerCard(c) + assessCard(c) + gearCard(c) + targetsCard(c) + whereCard(c) + milesCard(c) + buildCard(c) +
-      (window.profSection ? window.profSection(c) : "");
+  /* ---------- персонаж ---------- */
+  const TABS = [["overview", "Обзор"], ["gear", "Экипировка"], ["talents", "Таланты"], ["level", "Кач"], ["build", "Билд"], ["prof", "Профессии"]];
+  function selector(cur) {
+    const P = party();
+    return '<div class="selector"><label for="charSel" class="sr">Персонаж</label><select id="charSel">' +
+      P.map(c => '<option value="' + c.id + '"' + (c.id === cur ? " selected" : "") + ">" + esc(c.name + " · " + (c.level || "?") + " · " + window.w(c.clsEn || "?")) + "</option>").join("") +
+      '</select><div class="chips">' + P.map(c => '<a class="chip" href="#c/' + c.id + '" aria-current="' + (c.id === cur) + '">' + charBadge(c) + esc(c.name.split(" ")[0]) + "</a>").join("") + "</div></div>";
+  }
+  function assess(ch) {
+    const out = [];
+    if (ch.found) {
+      if (ch.data.ilvl) { const d = ch.data.ilvl - ch.level; out.push([d >= -4 ? "good" : d >= -8 ? "warn" : "bad", "Средний уровень предметов " + ch.data.ilvl]); }
+      const weak = ch.gear.filter(g => g.id && g.ilvl && g.ilvl <= ch.level - 8).map(g => SLOT_RU[g.slot].toLowerCase());
+      if (weak.length) out.push(["warn", "Отстают: " + weak.join(", ")]);
+      const empty = ch.gear.filter(g => !g.id && !["offhand", "ranged"].includes(g.slot)).map(g => SLOT_RU[g.slot].toLowerCase());
+      if (empty.length) out.push(["bad", "Пусто: " + empty.join(", ")]);
+      const known = ch.talents.filter(t => t.points != null).reduce((a, t) => a + t.points, 0), exp = Math.max(0, ch.level - 9);
+      if (ch.talents.length && known < exp) out.push(["warn", "Таланты: видно " + known + " из " + exp]);
+    } else out.push(["warn", "Персонажа пока нет в armory: профиль появляется с 10 уровня после выхода из игры"]);
+    return out;
+  }
+  function tabOverview(ch) {
+    const k = KB.CLASSES[ch.cls] || { color: "#777" };
+    let h = card(null, null, '<div class="chead">' + ico(ch.cls, k.color, "big") + '<div><div class="cname">' + esc(ch.name) + '</div><div class="sub">' +
+      esc([window.w(ch.clsEn || "?"), window.w(ch.race), window.w(ch.faction), (ch.entry.region || "").toUpperCase(), "игрок: " + (ch.owner || "—")].filter(Boolean).join(" · ")) +
+      '</div></div><div class="lvl">' + (ch.level || "?") + "</div></div>" +
+      '<div class="tags">' + assess(ch).map(a => '<span class="tag ' + a[0] + '">' + esc(a[1]) + "</span>").join("") + "</div>" +
+      '<p class="sub">' + (ch.found ? "Armory проверен " + esc(date(ch.data.checked)) + ' · <a href="' + esc(ch.data.url) + '" target="_blank" rel="noopener">открыть armory</a>' : "Последняя проверка " + esc(date(ch.data.fetched))) +
+      (changes(ch).length ? "<br>Изменения: " + changes(ch).join(" · ") : "") + "</p>");
+    const ups = upgradesFor(ch, 8);
+    h += card("Что добыть сейчас", "build", ups.length ? '<ul class="loot">' + ups.map(u => "<li>" + slotIco(u.slot, (st.items[u.id] || {}).q) + '<div class="lmain">' + itemChip(u.id) +
+      '<div class="sub">' + esc(SLOT_RU[u.slot] || u.slot) + (u.delta > 0 ? " · +" + u.delta + " к уровню предмета" : "") + '</div></div><div class="lwhere sub">' + fmt(u.where) + "</div></li>").join("") + "</ul>"
+      : '<p class="sub">Для этого уровня и класса целей пока нет.</p>');
+    return h;
+  }
+  function tabGear(ch) {
+    if (!ch.found) return card("Экипировка", "gear", '<p class="sub">Появится, когда персонаж будет в armory.</p>');
+    const twoH = isTwoHander(ch);
+    const rows = ch.gear.filter(g => g.id || !(g.slot === "ranged" || (g.slot === "offhand" && twoH))).map(g => '<li class="slot">' + slotIco(g.slot, g.q) + '<span class="slot-n">' + esc(SLOT_RU[g.slot] || g.slot) + "</span>" +
+      (g.id ? itemChip(g.id, g.name) : '<span class="empty">пусто</span>') + (g.ilvl ? '<span class="rng">' + g.ilvl + "</span>" : "") + "</li>").join("");
+    const S = ch.stats, keys = [["Health", "Здоровье"], ["Strength", "Сила"], ["Agility", "Ловкость"], ["Stamina", "Выносливость"], ["Intellect", "Интеллект"],
+      ["Spirit", "Дух"], ["Armor", "Броня"], ["Attack power", "Сила атаки"], ["Melee critical strike", "Крит"], ["Main-hand DPS", "Урон в сек."]];
+    return card("Экипировка", "gear", '<ul class="gear">' + rows + "</ul>") +
+      card("Характеристики", null, '<div class="stats">' + keys.filter(k => S[k[0]]).map(k => '<div class="stat"><span>' + k[1] + "</span><b>" + esc(S[k[0]]) + "</b></div>").join("") + "</div>");
+  }
+  function tabTalents(ch) {
+    if (!ch.talents.length) return card("Таланты", "build", '<p class="sub">Дерево появится вместе с данными из armory.</p>');
+    const best = ch.talents.slice().sort((a, b) => (b.points || 0) - (a.points || 0))[0].name;
+    const sel = ls.get("wmm.tree." + ch.id, best), tr = ch.talents.find(t => t.name === sel) || ch.talents[0];
+    const nodes = tr.nodes.map(n => { const known = n.rank != null, label = (known ? n.rank : "?") + "/" + n.max;
+      const cls = !known ? "unk" : n.rank >= n.max ? "full" : n.rank > 0 ? "part" : "none";
+      return '<button type="button" class="tnode ' + cls + '" style="grid-row:' + (n.r + 1) + ";grid-column:" + (n.c + 1) + '" data-name="' + esc(n.name) +
+        '" data-rank="Ранг ' + esc(label) + '" data-desc="' + esc(n.desc) + '" aria-label="' + esc(n.name + ", " + label) + '"><span class="tglyph">' +
+        esc(n.name.split(/\s+/).map(x => x[0]).join("").slice(0, 2)) + '</span><span class="trank">' + esc(label) + "</span></button>"; }).join("");
+    return card("Таланты", "build", '<div class="seg">' + ch.talents.map(t => '<button data-tree="' + esc(t.name) + '" data-c="' + ch.id + '" aria-pressed="' + (t === tr) + '">' +
+      esc(window.w(t.name)) + " · " + (t.points ?? "?") + "</button>").join("") + '</div><div class="tgrid">' + nodes +
+      '</div><p class="sub">Нажми на талант, чтобы прочитать описание. Описания — на английском, как в игре; распределение «?» armory не подтверждает.</p>');
+  }
+  function tabLevel(ch) {
+    if (!ch.level) return card("Кач", "map", '<p class="sub">Уровень неизвестен.</p>');
+    const zs = zonesFor(ch.level, ch.faction).map(z => z[0] === "Starting zone" ? [KB.STARTS[ch.race] || "Starting zone", z[1], z[2]] : z);
+    const ds = KB.DUNGEONS.filter(d => ch.level >= d[1] - 1 && ch.level <= d[2]);
+    const done = ls.get("wmm.done." + ch.id, {});
+    const miles = KB.MILES.filter(m => (!m[2] || m[2] === ch.cls) && (!m[3] || m[3] === (ch.faction === "Alliance" ? "A" : "H"))).sort((a, b) => a[1] - b[1]);
+    const now = miles.filter(m => m[1] <= ch.level), next = miles.filter(m => m[1] > ch.level).slice(0, 3);
+    return '<div class="grid2">' + card("Зоны", "map", '<ul class="rows">' + zs.map(z => "<li><b>" + esc(window.w(z[0])) + '</b><span class="rng">' + z[1] + "–" + z[2] + "</span></li>").join("") + "</ul>") +
+      card("Подземелья", "quest", ds.length ? '<ul class="rows">' + ds.map(d => "<li><span><b>" + esc(window.w(d[0])) + '</b><br><span class="sub">' + esc(window.w(d[3])) + '</span></span><span class="rng">' + d[1] + "–" + d[2] + "</span></li>").join("") + "</ul>" : '<p class="sub">Первое подземелье с 13 уровня.</p>') + "</div>" +
+      card("Вехи", "quest", now.map(m => '<label class="chk"><input type="checkbox" data-ms="' + m[0] + '" data-c="' + ch.id + '"' + (done[m[0]] ? " checked" : "") + '><span class="' + (done[m[0]] ? "done" : "") + '">' + fmt(m[4]) + ' <span class="rng">' + m[1] + "</span></span></label>").join("") +
+        (next.length ? '<h3>Дальше</h3><ul class="rows">' + next.map(m => "<li><span>" + fmt(m[4]) + '</span><span class="rng">' + m[1] + "</span></li>").join("") + "</ul>" : "") +
+        '<p class="sub">Отметки хранятся только в твоем браузере.</p>');
+  }
+  function tabBuild(ch) {
+    const B = KB.BUILDS[ch.cls];
+    if (!B) return card("Билд", "build", '<p class="note">Гайд для этого класса еще не собран. Напиши Claude в чате проекта, он добавит.</p>');
+    const keys = Object.keys(B.specs), sp = ls.get("wmm.spec." + ch.id, B.specs[ch.spec] ? ch.spec : keys[0]), S = B.specs[sp] || B.specs[keys[0]];
+    return card("Билд", "build", "<p>" + fmt(B.intro) + '</p><div class="seg">' + keys.map(k => '<button data-spec="' + k + '" data-c="' + ch.id + '" aria-pressed="' + (B.specs[k] === S) + '">' + esc(window.w(B.specs[k].name)) + "</button>").join("") + "</div>" +
+      '<ul class="rows">' + S.steps.map(s => '<li class="' + (ch.level >= s[0] && ch.level <= s[1] ? "cur" : "") + '"><span>' + fmt(s[2]) + '</span><span class="rng">' + (s[0] === s[1] ? s[0] : s[0] + "–" + s[1]) + "</span></li>").join("") + "</ul>" +
+      '<p class="sub">К 60: ' + esc(S.final) + "</p>") + card("Как играть", null, "<p>" + fmt(B.play) + "</p>");
+  }
+  function tabProf(ch) {
+    const B = KB.BUILDS[ch.cls], have = ch.entry.professions || [];
+    return card("Профессии", null, (B ? "<p>" + fmt(B.prof) + "</p>" : "") +
+      "<h3>Основные (две)</h3>" + '<ul class="rows">' + KB.PROF.primary.map(p => '<li class="' + (have.includes(p) ? "cur" : "") + '"><span><b>' + esc(window.w(p)) + '</b><br><span class="sub">' + esc(KB.PROF.info[p]) + "</span></span></li>").join("") + "</ul>" +
+      "<h3>Вторичные (все три)</h3>" + '<ul class="rows">' + KB.PROF.secondary.map(p => "<li><span><b>" + esc(window.w(p)) + '</b><br><span class="sub">' + esc(KB.PROF.info[p]) + "</span></span></li>").join("") + "</ul>");
+  }
+  function charView(id, tab) {
+    const entry = st.roster.find(r => r.id === id) || st.roster[0];
+    if (!entry) return card("Нет персонажей", "users", "<p>Добавь персонажа во вкладке «Состав».</p>");
+    const ch = model(entry), t = TABS.find(x => x[0] === tab) ? tab : "overview";
+    const body = { overview: tabOverview, gear: tabGear, talents: tabTalents, level: tabLevel, build: tabBuild, prof: tabProf }[t](ch);
+    return selector(ch.id) + '<nav class="tabs" aria-label="Разделы">' + TABS.map(x => '<a href="#c/' + ch.id + "/" + x[0] + '" aria-current="' + (x[0] === t) + '">' + x[1] + "</a>").join("") + "</nav>" + body;
   }
 
-  function planView() {
-    const P = window.PLAN;
-    let h = '<section class="panel"><h2>' + sic("map") + esc(P.title) + "</h2><p>" + esc(P.intro) + "</p>" +
-      '<h3>Собрать квесты перед выходом</h3><ul class="list">' + P.pickup.map(p => "<li><span><b>" + esc(p[2]) + '</b><br><span class="sub">' +
-        esc(p[1] + " · " + p[0]) + '</span></span><span class="tag">' + esc(p[3]) + "</span></li>").join("") + "</ul></section>";
-    P.steps.forEach((s, i) => {
-      h += '<section class="panel" id="plan-' + s.key + '"><h2><span class="stepn">' + (i + 1) + "</span>" + esc(s.name) + '</h2><div class="row"><span class="tag">' + esc(s.lvl) + "</span></div>" +
-        "<p>" + esc(s.where) + '</p><p class="sub">Боссы: ' + esc(s.bosses) + "</p>";
-      if (s.attune) h += '<h3>Доступ: ключ канализации</h3><ol class="steps">' + s.attune.map(a => "<li>" + esc(a) + "</li>").join("") + "</ol>";
-      h += '<h3>Квесты</h3><ul class="list">' + s.quests.map(q => "<li><span><b>" + esc(q[0]) + '</b> <span class="sub">· ' + esc(q[1]) +
-        "</span><br>" + esc(q[2]) + '<br><span class="sub">Награда: ' + linkify(q[3]) + "</span></span></li>").join("") + "</ul>";
-      h += '<h3>Что выбить паладину</h3><ul class="list">' + s.loot.map(l => "<li><span>" + item(l[0]) + ' <span class="sub">· ' + esc(l[1]) +
-        "</span><br>" + linkify(l[2]) + "</span></li>").join("") + "</ul>";
-      if (s.tips) h += '<p class="note">' + linkify(s.tips) + "</p>";
-      h += "</section>";
+  /* ---------- план ---------- */
+  function planView(open) {
+    const done = ls.get("wmm.plan.done", {});
+    let h = card(PLAN.title, "map", "<p>" + fmt(PLAN.intro) + "</p>");
+    h += '<details class="card fold"' + (open ? "" : " open") + "><summary>Собрать квесты перед выходом</summary>" + '<ul class="rows">' + PLAN.pickup.map(p => "<li><span><b>" + fmt(p[2]) + '</b><br><span class="sub">' + fmt(p[1]) + " · " + fmt(p[0]) + "</span></span></li>").join("") + "</ul></details>";
+    PLAN.steps.forEach((s, i) => {
+      h += '<details class="card fold" id="plan-' + s.key + '"' + (open === s.key ? " open" : "") + '><summary><span class="stepn">' + (i + 1) + "</span>" + esc(s.name) + ' <span class="rng">' + s.min + "–" + s.max + "</span>" + (done[s.key] ? ' <span class="tag good">пройдено</span>' : "") + "</summary>" +
+        "<p>" + fmt(s.where) + '</p><p class="sub">Боссы: ' + esc(s.bosses) + "</p>" +
+        (s.attune ? "<h3>Доступ: ключ канализации</h3><ol>" + s.attune.map(a => "<li>" + fmt(a) + "</li>").join("") + "</ol>" : "") +
+        '<h3>Квесты</h3><ul class="rows">' + s.quests.map(q => "<li><span><b>" + esc(q[0]) + '</b> <span class="sub">· ' + fmt(q[1]) + "</span><br>" + fmt(q[2]) + '<br><span class="sub">Награда: ' + fmt(q[3]) + "</span></span></li>").join("") + "</ul>" +
+        '<h3>Что выбить</h3><ul class="loot">' + s.loot.map(l => "<li>" + (l[0] ? slotIco((st.items[l[0]] || {}).lines ? guessSlot(l[0]) : "trinket", (st.items[l[0]] || {}).q) : slotIco("trinket", 0)) + '<div class="lmain">' + (l[0] ? itemChip(l[0]) : "") + '<div class="sub">' + esc(l[1]) + '</div></div><div class="lwhere sub">' + fmt(l[2]) + "</div></li>").join("") + "</ul>" +
+        (s.tips ? '<p class="note">' + fmt(s.tips) + "</p>" : "") +
+        '<label class="chk"><input type="checkbox" data-plan="' + s.key + '"' + (done[s.key] ? " checked" : "") + "><span>Пройдено (отметка только в твоем браузере)</span></label></details>";
     });
     return h;
   }
-
-  /* ---------- навигация ---------- */
-  function route() {
-    const hash = location.hash.replace("#", "");
-    const chars = window.CHARS;
-    const cur = hash === "plan" ? "plan" : (chars.find(c => "c-" + c.id === hash) ? hash : "c-" + chars[0].id);
-    const nav = chars.map(c => { const k = CLASSES[c.cls] || { color: "#888" };
-      return '<a class="chip" href="#c-' + c.id + '" aria-current="' + ("c-" + c.id === cur) + '">' + ico(c.cls, k.color) + esc(c.first + " " + c.last) +
-        ' <span class="sub">' + c.level + "</span></a>"; }).join("") +
-      '<a class="chip" href="#plan" aria-current="' + (cur === "plan") + '">' + sic("map") + "План подземелий</a>";
-    $("#nav").innerHTML = nav;
-    const c = chars.find(x => "c-" + x.id === cur);
-    $("#app").innerHTML = cur === "plan" ? planView() : charView(c);
-    refreshTooltips();
+  function guessSlot(id) {
+    const l = itemLines(id).map(x => x.t).join(" | ");
+    const map = [["Two-Hand", "mainhand"], ["One-Hand", "mainhand"], ["Main Hand", "mainhand"], ["Off Hand", "offhand"], ["Shield", "offhand"], ["Head", "head"], ["Neck", "neck"], ["Shoulder", "shoulder"],
+      ["Back", "back"], ["Chest", "chest"], ["Wrist", "wrist"], ["Hands", "hands"], ["Waist", "waist"], ["Legs", "legs"], ["Feet", "feet"], ["Finger", "finger"], ["Trinket", "trinket"]];
+    const f = map.find(m => l.includes(m[0])); return f ? f[1] : "trinket";
   }
+
+  /* ---------- состав ---------- */
+  function manageView() {
+    const P = party();
+    const issue = (tpl, params) => REPO + "/issues/new?template=" + tpl + "&" + Object.entries(params).map(([k, v]) => k + "=" + encodeURIComponent(v)).join("&");
+    let h = refreshBlock();
+    h += card("Состав пати", "users", '<ul class="rows">' + P.map(c => "<li><span>" + charBadge(c) + "<b>" + esc(c.name) + '</b> <span class="sub">' + esc(window.w(c.clsEn || "?")) + " · " + (c.level || "?") + " · " + esc(c.owner || "") + "</span></span>" +
+      '<a class="btn" href="' + issue("remove.yml", { title: "[remove] " + c.name, who: c.name }) + '" target="_blank" rel="noopener">Удалить</a></li>').join("") + "</ul>");
+    h += card("Добавить персонажа", null, '<form id="addForm" class="form"><label>Имя<input id="fName" required autocomplete="off"></label><label>Фамилия<input id="fSurname" autocomplete="off"></label>' +
+      '<label>Регион<select id="fRegion"><option>eu</option><option>us</option></select></label><label>Игрок<input id="fOwner" autocomplete="off" placeholder="чей персонаж"></label>' +
+      '<label>Класс <span class="sub">если персонажа нет в armory</span><select id="fCls"><option value="">—</option>' + Object.values(KB.CLASSES).map(c => "<option>" + c.en + "</option>").join("") + "</select></label>" +
+      '<label>Уровень <span class="sub">если нет в armory</span><input id="fLevel" type="number" min="1" max="60"></label><button class="btn primary" type="submit">Добавить</button></form>' +
+      '<p class="sub">Кнопка откроет заявку на GitHub — останется нажать Create. Бот найдет персонажа в armory, добавит его и обновит сайт за пару минут. ' +
+      "Заявки принимаются от участников из списка data/members.json; чтобы друг мог добавлять сам, впиши туда его логин GitHub (или попроси Claude).</p>");
+    return h;
+  }
+
+  /* ---------- маршрутизация ---------- */
+  function render() {
+    const parts = location.hash.replace(/^#/, "").split("/");
+    const page = parts[0] || "home";
+    const nav = [["home", "Сводка", "home"], ["c", "Персонажи", "users"], ["plan", "План подземелий", "map"], ["manage", "Состав", "build"]];
+    $("#nav").innerHTML = nav.map(n => '<a href="#' + n[0] + '" aria-current="' + (page === n[0]) + '">' + sic(n[2]) + "<span>" + n[1] + "</span></a>").join("");
+    let html;
+    if (!st.loaded) html = st.error ? card("Не удалось загрузить данные", null, '<p class="note">' + esc(st.error) + "</p>") : '<p class="sub">Загружаю журнал…</p>';
+    else if (page === "c") html = charView(parts[1], parts[2]);
+    else if (page === "plan") html = planView(parts[1]);
+    else if (page === "manage") html = manageView();
+    else html = homeView();
+    $("#app").innerHTML = html;
+    if (page === "plan" && parts[1]) { const el = document.getElementById("plan-" + parts[1]); el && el.scrollIntoView(); }
+  }
+  addEventListener("hashchange", () => { render(); if (!/^#plan\//.test(location.hash)) scrollTo({ top: 0 }); });
   document.addEventListener("change", e => {
     const t = e.target;
-    if (t.dataset && t.dataset.ms) { const c = window.CHARS.find(x => x.id === t.dataset.c), d = ls.get(doneKey(c)) || {};
-      if (t.checked) d[t.dataset.ms] = true; else delete d[t.dataset.ms]; ls.set(doneKey(c), d); route(); }
+    if (t.id === "charSel") location.hash = "#c/" + t.value + "/" + ((location.hash.split("/")[2]) || "overview");
+    if (t.dataset.ms) { const k = "wmm.done." + t.dataset.c, d = ls.get(k, {}); t.checked ? d[t.dataset.ms] = 1 : delete d[t.dataset.ms]; ls.set(k, d); render(); }
+    if (t.dataset.plan) { const d = ls.get("wmm.plan.done", {}); t.checked ? d[t.dataset.plan] = 1 : delete d[t.dataset.plan]; ls.set("wmm.plan.done", d); render(); }
   });
   document.addEventListener("click", e => {
-    const b = e.target.closest("[data-spec]");
-    if (b) { ls.set("wowj.spec." + b.dataset.c, b.dataset.spec); route(); }
-    const tb = e.target.closest("[data-tree]");
-    if (tb) { ls.set("wowj.tree." + tb.dataset.c, tb.dataset.tree); route(); }
+    const b = e.target.closest && e.target.closest("[data-spec],[data-tree]");
+    if (!b) return;
+    if (b.dataset.spec) ls.set("wmm.spec." + b.dataset.c, b.dataset.spec);
+    if (b.dataset.tree) ls.set("wmm.tree." + b.dataset.c, b.dataset.tree);
+    render();
   });
-  addEventListener("hashchange", () => { route(); scrollTo({ top: 0 }); });
+  document.addEventListener("submit", e => {
+    if (e.target.id !== "addForm") return;
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const p = { title: "[add] " + v("fName") + " " + v("fSurname"), name: v("fName"), surname: v("fSurname"), region: v("fRegion"), owner: v("fOwner"), cls: v("fCls"), level: v("fLevel") };
+    const url = REPO + "/issues/new?template=add.yml&" + Object.entries(p).filter(([k, x]) => x).map(([k, x]) => k + "=" + encodeURIComponent(x)).join("&");
+    const a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener"; document.body.appendChild(a); a.click(); a.remove();
+  });
 
-  const srcs = (typeof SOURCES !== "undefined" ? SOURCES : []).concat([["timesaver.gg: вещи по уровням", "https://timesaver.gg/tools/wow-forever/leveling-gear"],
-    ["Warcraft Tavern: квесты подземелий", "https://www.warcrafttavern.com/forever/guides/dungeons/"], ["Method: гайды подземелий", "https://www.method.gg/wow-forever/dungeons/city-of-dalaran"]]);
-  $("#foot").innerHTML = "<span>Источники: " + srcs.map(s => '<a href="' + s[1] + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a>").join(" · ") + "</span>" +
-    '<span>Характеристики предметов — armory wow-classic-premium.com и подсказки Wowhead. Деревья и описания талантов — WoW Forever (CC BY 4.0) через <a href="https://wow-classic-premium.com/en/forever/armory" target="_blank" rel="noopener">wow-classic-premium.com</a>.</span>' +
-    "<span>Фан-страница, не связана с Blizzard Entertainment. Обновлено 14.11.2026.</span>";
-  route();
+  /* ---------- загрузка ---------- */
+  const get = (p, v) => fetch(p + "?v=" + encodeURIComponent(v), { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(p + ": " + r.status); return r.json(); });
+  $("#foot").innerHTML = "<span>WoW Minmaxxer v" + VERSION + ' · <a href="' + REPO + '" target="_blank" rel="noopener">GitHub</a> · <a href="' + REPO + '/blob/main/CHANGELOG.md" target="_blank" rel="noopener">что нового</a></span>' +
+    "<span>Источники: " + KB.SOURCES.map(s => '<a href="' + s[1] + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a>").join(" · ") + "</span>" +
+    "<span>Предметы — подсказки Wowhead (en/ru), персонажи и описания талантов — armory wow-classic-premium.com (WoW Forever, CC BY 4.0). Фан-проект, не связан с Blizzard Entertainment.</span>";
+  render();
+  (async () => {
+    try {
+      st.meta = await get("data/meta.json", Date.now());
+      const v = st.meta.updated || Date.now();
+      [st.roster, st.items] = await Promise.all([get("data/roster.json", v), get("data/items.json", v)]);
+      const chars = await Promise.all(st.roster.map(r => get("data/characters/" + r.id + ".json", v).catch(() => ({}))));
+      st.roster.forEach((r, i) => { st.chars[r.id] = chars[i]; });
+      st.loaded = true;
+    } catch (e) { st.error = "Проверь соединение и обнови страницу. " + e.message; }
+    render();
+  })();
 })();

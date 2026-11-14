@@ -184,7 +184,10 @@ def fetch_item(iid):
             j = r.json()
         except ValueError:
             continue
-        res[key] = j.get("name")
+        name = j.get("name")
+        if key == "ru" and (not name or name.startswith("[") or name == res.get("en")):
+            name = None  # у предмета нет официального русского названия
+        res[key] = name
         if key == "en":
             res["q"] = j.get("quality")
             res["lines"] = tooltip_lines(j.get("tooltip", ""))
@@ -294,7 +297,7 @@ def main():
                 if g.get("id"): want.add(g["id"])
         for iid in sorted(want):
             k = str(iid)
-            if k in items and items[k].get("ru") and items[k].get("lines"):
+            if k in items and "ru" in items[k] and items[k].get("lines"):
                 continue
             try:
                 it = fetch_item(iid)
