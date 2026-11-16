@@ -3586,5 +3586,141 @@
    }
   ],
   "ru": "Захваты проклятия шипов"
+ },
+ "4716": {
+  "en": "Combat Cloak",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 32",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "22 Armor",
+    "c": null
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "+2 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 27",
+    "c": null
+   }
+  ],
+  "ru": "Плащ Битвы"
+ },
+ "13010": {
+  "en": "Dreamsinger Legguards",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 26",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Legs · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "179 Armor",
+    "c": null
+   },
+   {
+    "t": "+8 Strength",
+    "c": null
+   },
+   {
+    "t": "+8 Stamina",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 21",
+    "c": null
+   }
+  ],
+  "ru": "Набедренники Снопевца"
+ },
+ "250502": {
+  "en": "Crusader's Chain Helm",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 30",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "177 Armor",
+    "c": null
+   },
+   {
+    "t": "+11 Strength",
+    "c": null
+   },
+   {
+    "t": "Requires Level 25",
+    "c": null
+   },
+   {
+    "t": "Equip: Increases damage and healing done by magical spells and effects by up to 14 .",
+    "c": "q2"
+   }
+  ],
+  "ru": "Плетеный шлем рыцаря"
+ },
+ "280766": {
+  "en": "Satchel of Potions",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Trinket",
+    "c": "q1"
+   },
+   {
+    "t": "Use: Reach into the bag and hope for the best. (10 Min Cooldown)",
+    "c": "q2"
+   },
+   {
+    "t": "\"Not every potion is meant for consumption.\"",
+    "c": "q"
+   }
+  ],
+  "ru": "Сумка с зельями"
  }
 }
