@@ -1,12 +1,8 @@
 {
  "status": "ok",
  "url": "https://wow-classic-premium.com/en/forever/character/eu/radi/vas",
- "fetched": "2026-11-19T19:13:10Z",
+ "fetched": "2026-11-20T01:23:30Z",
  "fullName": "Radi Vas",
- "level": 32,
- "race": "Undead",
- "cls": "Paladin",
- "faction": "Horde",
  "ruleset": "PvP",
  "checked": "2026-11-16T08:34:41+00:00",
  "gs": 307,
@@ -690,6 +686,28 @@
   {
    "date": "2026-11-16T08:34:41+00:00",
    "level": 32,
+   "gs": 307,
+   "gear": [
+    2877,
+    4716,
+    6414,
+    6627,
+    6906,
+    12978,
+    13010,
+    17694,
+    250502,
+    273025,
+    273028,
+    276895,
+    280766,
+    281265,
+    286981
+   ]
+  },
+  {
+   "date": "2026-11-16T08:34:41+00:00",
+   "level": null,
    "gs": 307,
    "gear": [
     2877,
