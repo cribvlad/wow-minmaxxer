@@ -3722,5 +3722,336 @@
    }
   ],
   "ru": "Сумка с зельями"
+ },
+ "1982": {
+  "en": "Nightblade",
+  "q": 4,
+  "lines": [
+   {
+    "t": "Item Level 44",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Two-Hand · Sword",
+    "c": "q1"
+   },
+   {
+    "t": "121 - 183 Damage · Speed 3.50",
+    "c": null
+   },
+   {
+    "t": "(43.43 damage per second)",
+    "c": null
+   },
+   {
+    "t": "Requires Level 39",
+    "c": null
+   },
+   {
+    "t": "Chance on hit: Sends a shadowy bolt at the enemy causing 161 to 301 Shadow damage.",
+    "c": "q2"
+   }
+  ],
+  "ru": null
+ },
+ "2870": {
+  "en": "Shining Silver Breastplate",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 29",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "214 Armor",
+    "c": null
+   },
+   {
+    "t": "+14 Strength",
+    "c": null
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 24",
+    "c": null
+   }
+  ],
+  "ru": "Сияющая серебряная кираса"
+ },
+ "6742": {
+  "en": "Stonefist Girdle",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 36",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Waist · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "134 Armor",
+    "c": null
+   },
+   {
+    "t": "+6 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Stamina",
+    "c": null
+   },
+   {
+    "t": "+100 Armor",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "13088": {
+  "en": "Gazlowe's Charm",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 41",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Neck",
+    "c": "q1"
+   },
+   {
+    "t": "+4 Strength",
+    "c": null
+   },
+   {
+    "t": "+11 Stamina",
+    "c": null
+   },
+   {
+    "t": "+3 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 36",
+    "c": null
+   }
+  ],
+  "ru": "Оберег Газлова"
+ },
+ "251965": {
+  "en": "Undead Knight's Bracers",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 36",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Wrist · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "95 Armor",
+    "c": null
+   },
+   {
+    "t": "+3 Strength",
+    "c": null
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "+3 Intellect",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "273048": {
+  "en": "Refractory Scaleguards",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 33",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Legs · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "199 Armor",
+    "c": null
+   },
+   {
+    "t": "+12 Strength",
+    "c": null
+   },
+   {
+    "t": "+100 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Arcane Resistance",
+    "c": null
+   },
+   {
+    "t": "Requires Level 28",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Unstable Sentinel",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 31.08%",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "274444": {
+  "en": "Greater Insignia of the Horde",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 1",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Unique",
+    "c": null
+   },
+   {
+    "t": "Trinket",
+    "c": "q1"
+   },
+   {
+    "t": "Requires Corporal/Grunt (Rank 2)",
+    "c": null
+   },
+   {
+    "t": "Use: Removes all movement impairing effects and all effects which cause loss of control of your character. (5 Min Cooldown)",
+    "c": "q2"
+   }
+  ],
+  "ru": "Большой знак различия Орды"
+ },
+ "274607": {
+  "en": "Viscera Spaulders",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 41",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Shoulder · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "193 Armor",
+    "c": null
+   },
+   {
+    "t": "+9 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "+70 Armor",
+    "c": null
+   },
+   {
+    "t": "Requires Level 36",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Deathless Marrow",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 27.94%",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "279848": {
+  "en": "Construct Cloak",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 36",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "24 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   }
+  ],
+  "ru": null
  }
 }

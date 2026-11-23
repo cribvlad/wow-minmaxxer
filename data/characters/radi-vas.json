@@ -1,12 +1,12 @@
 {
  "status": "ok",
  "url": "https://wow-classic-premium.com/en/forever/character/eu/radi/vas",
- "fetched": "2026-11-23T13:35:19Z",
+ "fetched": "2026-11-23T19:14:37Z",
  "fullName": "Radi Vas",
  "ruleset": "PvP",
- "checked": "2026-11-16T08:34:41+00:00",
- "gs": 307,
- "ilvl": 28,
+ "checked": "2026-11-23T15:45:48+00:00",
+ "gs": 391,
+ "ilvl": 32,
  "gear": [
   {
    "slot": "head",
@@ -22,62 +22,65 @@
   },
   {
    "slot": "neck",
-   "id": 281265,
-   "name": "Roadwatcher's Confidence",
-   "q": 2,
-   "ilvl": 20,
+   "id": 13088,
+   "name": "Gazlowe's Charm",
+   "q": 3,
+   "ilvl": 41,
    "lines": [
+    "+4 Strength",
+    "+11 Stamina",
     "+3 Spirit"
    ]
   },
   {
    "slot": "shoulder",
-   "id": 273028,
-   "name": "Reliquary Mantle",
+   "id": 274607,
+   "name": "Viscera Spaulders",
    "q": 3,
-   "ilvl": 33,
+   "ilvl": 41,
    "lines": [
-    "171 Armor",
-    "+12 Stamina",
-    "+4 Hit"
+    "193 Armor",
+    "+9 Strength",
+    "+10 Stamina",
+    "+70 Bonus Armor"
    ]
   },
   {
    "slot": "back",
-   "id": 4716,
-   "name": "Combat Cloak",
+   "id": 279848,
+   "name": "Construct Cloak",
    "q": 2,
-   "ilvl": 32,
+   "ilvl": 36,
    "lines": [
-    "22 Armor",
-    "+6 Stamina",
-    "+2 Spirit"
+    "24 Armor",
+    "+5 Strength",
+    "+5 Spirit"
    ]
   },
   {
    "slot": "chest",
-   "id": 6627,
-   "name": "Mutant Scale Breastplate",
+   "id": 2870,
+   "name": "Shining Silver Breastplate",
    "q": 3,
-   "ilvl": 23,
+   "ilvl": 29,
    "lines": [
-    "194 Armor",
-    "+10 Strength",
-    "+4 Stamina",
-    "Enchanted: Stamina +2"
+    "214 Armor",
+    "+14 Strength",
+    "+6 Stamina",
+    "Enchanted: Stamina +3 and Armor +24"
    ]
   },
   {
    "slot": "wrist",
-   "id": 286981,
-   "name": "Death Bindings",
-   "q": 3,
-   "ilvl": 21,
+   "id": 251965,
+   "name": "Undead Knight's Bracers",
+   "q": 2,
+   "ilvl": 36,
    "lines": [
-    "82 Armor",
-    "+5 Strength",
-    "+2 Spirit",
-    "Enchanted: Stamina +2"
+    "95 Armor",
+    "+3 Intellect",
+    "+3 Strength",
+    "+6 Stamina"
    ]
   },
   {
@@ -90,32 +93,35 @@
     "132 Armor",
     "+8 Strength",
     "+5 Stamina",
-    "+5 Nature Resistance"
+    "+5 Nature Resistance",
+    "Enchanted: Stamina +3 and Armor +24"
    ]
   },
   {
    "slot": "waist",
-   "id": 12978,
-   "name": "Stormbringer Belt",
+   "id": 6742,
+   "name": "Stonefist Girdle",
    "q": 3,
-   "ilvl": 20,
+   "ilvl": 36,
    "lines": [
-    "104 Armor",
-    "+5 Strength",
-    "+2 Stamina"
+    "134 Armor",
+    "+6 Strength",
+    "+5 Stamina",
+    "+100 Bonus Armor"
    ]
   },
   {
    "slot": "legs",
-   "id": 13010,
-   "name": "Dreamsinger Legguards",
+   "id": 273048,
+   "name": "Refractory Scaleguards",
    "q": 3,
-   "ilvl": 26,
+   "ilvl": 33,
    "lines": [
-    "179 Armor",
-    "+8 Strength",
-    "+8 Stamina",
-    "+5 Spirit"
+    "199 Armor",
+    "+12 Strength",
+    "+5 Arcane Resistance",
+    "+100 Bonus Armor",
+    "Enchanted: Stamina +3 and Armor +24"
    ]
   },
   {
@@ -128,7 +134,8 @@
     "152 Armor",
     "+6 Intellect",
     "+7 Strength",
-    "+7 Stamina"
+    "+7 Stamina",
+    "Enchanted: Stamina +3 and Armor +24"
    ]
   },
   {
@@ -144,17 +151,28 @@
   },
   {
    "slot": "finger2",
-   "id": 17694,
-   "name": "Band of the Fist",
-   "q": 2,
-   "ilvl": 28,
+   "id": 6693,
+   "name": "Agamaggan's Clutch",
+   "q": 3,
+   "ilvl": 35,
    "lines": [
-    "+4 Agility",
-    "+4 Strength"
+    "+5 Stamina",
+    "+6 Spirit",
+    "Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs."
    ]
   },
   {
    "slot": "trinket1",
+   "id": 274444,
+   "name": "Greater Insignia of the Horde",
+   "q": 3,
+   "ilvl": 1,
+   "lines": [
+    "Use: Removes all movement impairing effects and all effects which cause loss of control of your character. (5 Min Cooldown)"
+   ]
+  },
+  {
+   "slot": "trinket2",
    "id": 276895,
    "name": "Transformative Cocoon",
    "q": 2,
@@ -164,28 +182,16 @@
    ]
   },
   {
-   "slot": "trinket2",
-   "id": 280766,
-   "name": "Satchel of Potions",
-   "q": 2,
-   "ilvl": 33,
-   "lines": [
-    "Use: Reach into the bag and hope for the best. (10 Min Cooldown)",
-    "Not every potion is meant for consumption."
-   ]
-  },
-  {
    "slot": "mainhand",
-   "id": 2877,
-   "name": "Combatant Claymore",
-   "q": 3,
-   "ilvl": 33,
+   "id": 1982,
+   "name": "Nightblade",
+   "q": 4,
+   "ilvl": 44,
    "lines": [
-    "64 - 97 Damage",
-    "Speed 2.90",
-    "(27.8 damage per second)",
-    "+10 Stamina",
-    "+15 Spirit"
+    "121 - 183 Damage",
+    "Speed 3.50",
+    "(43.4 damage per second)",
+    "Chance on hit: Sends a shadowy bolt at the enemy causing 161 to 301 Shadow damage."
    ]
   },
   {
@@ -725,6 +731,28 @@
     280766,
     281265,
     286981
+   ]
+  },
+  {
+   "date": "2026-11-23T15:45:48+00:00",
+   "level": null,
+   "gs": 391,
+   "gear": [
+    1982,
+    2870,
+    6414,
+    6693,
+    6742,
+    6906,
+    13088,
+    250502,
+    251965,
+    273025,
+    273048,
+    274444,
+    274607,
+    276895,
+    279848
    ]
   }
  ]
