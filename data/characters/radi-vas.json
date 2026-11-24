@@ -1,23 +1,24 @@
 {
  "status": "ok",
  "url": "https://wow-classic-premium.com/en/forever/character/eu/radi/vas",
- "fetched": "2026-11-24T13:30:35Z",
+ "fetched": "2026-11-24T19:13:55Z",
  "fullName": "Radi Vas",
  "ruleset": "PvP",
- "checked": "2026-11-23T15:45:48+00:00",
- "gs": 391,
- "ilvl": 32,
+ "checked": "2026-11-24T15:13:12+00:00",
+ "gs": 436,
+ "ilvl": 35,
  "gear": [
   {
    "slot": "head",
-   "id": 250502,
-   "name": "Crusader's Chain Helm",
+   "id": 274609,
+   "name": "Serpentbane Crown",
    "q": 3,
-   "ilvl": 30,
+   "ilvl": 42,
    "lines": [
-    "177 Armor",
-    "+11 Strength",
-    "+14 Spell Power"
+    "213 Armor",
+    "+16 Stamina",
+    "+8 Nature Resistance",
+    "Use: Inflict 89 to 112 Fire damage to your current target and an additional 225 damage over 10 sec. Inflicts 2 times as much damage to Beast and Serpentine targets. (5 Min Cooldown)"
    ]
   },
   {
@@ -59,28 +60,28 @@
   },
   {
    "slot": "chest",
-   "id": 2870,
-   "name": "Shining Silver Breastplate",
+   "id": 1715,
+   "name": "Polished Jazeraint Armor",
    "q": 3,
-   "ilvl": 29,
+   "ilvl": 44,
    "lines": [
-    "214 Armor",
-    "+14 Strength",
-    "+6 Stamina",
-    "Enchanted: Stamina +3 and Armor +24"
+    "270 Armor",
+    "+9 Strength",
+    "+10 Stamina",
+    "+17 Spirit",
+    "Enchanted: +10 Stamina"
    ]
   },
   {
    "slot": "wrist",
-   "id": 251965,
-   "name": "Undead Knight's Bracers",
-   "q": 2,
-   "ilvl": 36,
+   "id": 13199,
+   "name": "Crushridge Bindings",
+   "q": 3,
+   "ilvl": 41,
    "lines": [
-    "95 Armor",
-    "+3 Intellect",
-    "+3 Strength",
-    "+6 Stamina"
+    "113 Armor",
+    "+5 Strength",
+    "+11 Stamina"
    ]
   },
   {
@@ -140,13 +141,14 @@
   },
   {
    "slot": "finger1",
-   "id": 6414,
-   "name": "Seal of Sylvanas",
+   "id": 13095,
+   "name": "Assault Band",
    "q": 3,
-   "ilvl": 29,
+   "ilvl": 44,
    "lines": [
-    "+8 Stamina",
-    "+6 Attack Power"
+    "+7 Stamina",
+    "+20 Attack Power",
+    "+5 Spirit"
    ]
   },
   {
@@ -191,7 +193,8 @@
     "121 - 183 Damage",
     "Speed 3.50",
     "(43.4 damage per second)",
-    "Chance on hit: Sends a shadowy bolt at the enemy causing 161 to 301 Shadow damage."
+    "Chance on hit: Sends a shadowy bolt at the enemy causing 161 to 301 Shadow damage.",
+    "Enchanted: Strength +15"
    ]
   },
   {
@@ -751,6 +754,28 @@
     273048,
     274444,
     274607,
+    276895,
+    279848
+   ]
+  },
+  {
+   "date": "2026-11-24T15:13:12+00:00",
+   "level": null,
+   "gs": 436,
+   "gear": [
+    1715,
+    1982,
+    6693,
+    6742,
+    6906,
+    13088,
+    13095,
+    13199,
+    273025,
+    273048,
+    274444,
+    274607,
+    274609,
     276895,
     279848
    ]

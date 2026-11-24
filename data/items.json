@@ -4053,5 +4053,165 @@
    }
   ],
   "ru": null
+ },
+ "1715": {
+  "en": "Polished Jazeraint Armor",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 44",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Chest · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "270 Armor",
+    "c": null
+   },
+   {
+    "t": "+9 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "+17 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 39",
+    "c": null
+   }
+  ],
+  "ru": "Полированная джазерентская броня"
+ },
+ "13095": {
+  "en": "Assault Band",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 44",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Unique",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "+5 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 39",
+    "c": null
+   },
+   {
+    "t": "Equip: +20 Attack Power.",
+    "c": "q2"
+   }
+  ],
+  "ru": "Кольцо Штурма"
+ },
+ "13199": {
+  "en": "Crushridge Bindings",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 41",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Wrist · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "113 Armor",
+    "c": null
+   },
+   {
+    "t": "+5 Strength",
+    "c": null
+   },
+   {
+    "t": "+11 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 36",
+    "c": null
+   }
+  ],
+  "ru": "Наручники Раздробленного хребта"
+ },
+ "274609": {
+  "en": "Serpentbane Crown",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 42",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Mail",
+    "c": "q1"
+   },
+   {
+    "t": "213 Armor",
+    "c": null
+   },
+   {
+    "t": "+16 Stamina",
+    "c": null
+   },
+   {
+    "t": "+8 Nature Resistance",
+    "c": null
+   },
+   {
+    "t": "Requires Level 37",
+    "c": null
+   },
+   {
+    "t": "Use: Inflict 89 to 112 Fire damage to your current target and an additional 225 damage over 10 sec. Inflicts 2 times as much damage to Beast and Serpentine targets. (5 Min Cooldown)",
+    "c": "q2"
+   },
+   {
+    "t": "Dropped by: Min'loth the Serpent",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 35.32%",
+    "c": null
+   }
+  ],
+  "ru": null
  }
 }
