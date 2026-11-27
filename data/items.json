@@ -4213,5 +4213,40 @@
    }
   ],
   "ru": null
+ },
+ "7938": {
+  "en": "Truesilver Gauntlets",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 45",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Hands · Plate",
+    "c": "q1"
+   },
+   {
+    "t": "300 Armor",
+    "c": null
+   },
+   {
+    "t": "+16 Strength",
+    "c": null
+   },
+   {
+    "t": "+7 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 40",
+    "c": null
+   }
+  ],
+  "ru": "Рукавицы из истинного серебра"
  }
 }

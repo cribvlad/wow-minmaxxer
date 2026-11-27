@@ -1,24 +1,23 @@
 {
  "status": "ok",
  "url": "https://wow-classic-premium.com/en/forever/character/eu/radi/vas",
- "fetched": "2026-11-26T07:37:56Z",
+ "fetched": "2026-11-27T01:34:37Z",
  "fullName": "Radi Vas",
  "ruleset": "PvP",
- "checked": "2026-11-24T15:13:12+00:00",
- "gs": 436,
- "ilvl": 35,
+ "checked": "2026-11-26T23:42:42+00:00",
+ "gs": null,
+ "ilvl": null,
  "gear": [
   {
    "slot": "head",
-   "id": 274609,
-   "name": "Serpentbane Crown",
+   "id": 250502,
+   "name": "Crusader's Chain Helm",
    "q": 3,
-   "ilvl": 42,
+   "ilvl": null,
    "lines": [
-    "213 Armor",
-    "+16 Stamina",
-    "+8 Nature Resistance",
-    "Use: Inflict 89 to 112 Fire damage to your current target and an additional 225 damage over 10 sec. Inflicts 2 times as much damage to Beast and Serpentine targets. (5 Min Cooldown)"
+    "177 Armor",
+    "+11 Strength",
+    "+14 Spell Power"
    ]
   },
   {
@@ -26,7 +25,7 @@
    "id": 13088,
    "name": "Gazlowe's Charm",
    "q": 3,
-   "ilvl": 41,
+   "ilvl": null,
    "lines": [
     "+4 Strength",
     "+11 Stamina",
@@ -38,7 +37,7 @@
    "id": 274607,
    "name": "Viscera Spaulders",
    "q": 3,
-   "ilvl": 41,
+   "ilvl": null,
    "lines": [
     "193 Armor",
     "+9 Strength",
@@ -51,7 +50,7 @@
    "id": 279848,
    "name": "Construct Cloak",
    "q": 2,
-   "ilvl": 36,
+   "ilvl": null,
    "lines": [
     "24 Armor",
     "+5 Strength",
@@ -63,7 +62,7 @@
    "id": 1715,
    "name": "Polished Jazeraint Armor",
    "q": 3,
-   "ilvl": 44,
+   "ilvl": null,
    "lines": [
     "270 Armor",
     "+9 Strength",
@@ -77,25 +76,24 @@
    "id": 13199,
    "name": "Crushridge Bindings",
    "q": 3,
-   "ilvl": 41,
+   "ilvl": null,
    "lines": [
     "113 Armor",
     "+5 Strength",
-    "+11 Stamina"
+    "+11 Stamina",
+    "Enchanted: Strength +5"
    ]
   },
   {
    "slot": "hands",
-   "id": 6906,
-   "name": "Algae Fists",
+   "id": 7938,
+   "name": "Truesilver Gauntlets",
    "q": 3,
-   "ilvl": 28,
+   "ilvl": null,
    "lines": [
-    "132 Armor",
-    "+8 Strength",
-    "+5 Stamina",
-    "+5 Nature Resistance",
-    "Enchanted: Stamina +3 and Armor +24"
+    "300 Armor",
+    "+16 Strength",
+    "+7 Stamina"
    ]
   },
   {
@@ -103,7 +101,7 @@
    "id": 6742,
    "name": "Stonefist Girdle",
    "q": 3,
-   "ilvl": 36,
+   "ilvl": null,
    "lines": [
     "134 Armor",
     "+6 Strength",
@@ -116,7 +114,7 @@
    "id": 273048,
    "name": "Refractory Scaleguards",
    "q": 3,
-   "ilvl": 33,
+   "ilvl": null,
    "lines": [
     "199 Armor",
     "+12 Strength",
@@ -130,7 +128,7 @@
    "id": 273025,
    "name": "Raptorclaw Greaves",
    "q": 3,
-   "ilvl": 31,
+   "ilvl": null,
    "lines": [
     "152 Armor",
     "+6 Intellect",
@@ -144,7 +142,7 @@
    "id": 13095,
    "name": "Assault Band",
    "q": 3,
-   "ilvl": 44,
+   "ilvl": null,
    "lines": [
     "+7 Stamina",
     "+20 Attack Power",
@@ -156,7 +154,7 @@
    "id": 6693,
    "name": "Agamaggan's Clutch",
    "q": 3,
-   "ilvl": 35,
+   "ilvl": null,
    "lines": [
     "+5 Stamina",
     "+6 Spirit",
@@ -168,7 +166,7 @@
    "id": 274444,
    "name": "Greater Insignia of the Horde",
    "q": 3,
-   "ilvl": 1,
+   "ilvl": null,
    "lines": [
     "Use: Removes all movement impairing effects and all effects which cause loss of control of your character. (5 Min Cooldown)"
    ]
@@ -178,7 +176,7 @@
    "id": 276895,
    "name": "Transformative Cocoon",
    "q": 2,
-   "ilvl": 30,
+   "ilvl": null,
    "lines": [
     "Use: Absorb up to 260 to 300 damage and Stun yourself for 5 sec. When the Stun expires, gain 60% increased movement speed for 8 sec. (5 Min Cooldown)"
    ]
@@ -188,7 +186,7 @@
    "id": 1982,
    "name": "Nightblade",
    "q": 4,
-   "ilvl": 44,
+   "ilvl": null,
    "lines": [
     "121 - 183 Damage",
     "Speed 3.50",
@@ -779,7 +777,28 @@
     276895,
     279848
    ]
+  },
+  {
+   "date": "2026-11-26T23:42:42+00:00",
+   "level": null,
+   "gs": null,
+   "gear": [
+    1715,
+    1982,
+    6693,
+    6742,
+    7938,
+    13088,
+    13095,
+    13199,
+    250502,
+    273025,
+    273048,
+    274444,
+    274607,
+    276895,
+    279848
+   ]
   }
- ],
- "lastError": "2026-11-26T19:14:42Z: 503 Server Error: Service Unavailable for url: https://wow-classic-premium.com/en/forever/character/eu/radi/vas"
+ ]
 }
