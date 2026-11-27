@@ -4248,5 +4248,300 @@
    }
   ],
   "ru": "Рукавицы из истинного серебра"
+ },
+ "7474": {
+  "en": "Regal Cloak",
+  "q": 2,
+  "lines": [
+   {
+    "t": "Item Level 40",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Back",
+    "c": null
+   },
+   {
+    "t": "26 Armor",
+    "c": null
+   },
+   {
+    "t": "<Random enchantment>",
+    "c": "q2"
+   },
+   {
+    "t": "Requires Level 35",
+    "c": null
+   }
+  ],
+  "ru": "Королевский плащ"
+ },
+ "275006": {
+  "en": "Krol'dok Warplate Helmet",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 46",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Head · Plate",
+    "c": "q1"
+   },
+   {
+    "t": "398 Armor",
+    "c": null
+   },
+   {
+    "t": "+19 Strength",
+    "c": null
+   },
+   {
+    "t": "+10 Stamina",
+    "c": null
+   },
+   {
+    "t": "+10 Spirit",
+    "c": null
+   },
+   {
+    "t": "Requires Level 41",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Battlegear (0/5) Krol'dok Warplate Helmet",
+    "c": "q"
+   },
+   {
+    "t": "Krol'dok Warplate Pauldrons",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Chest",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Legplates",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Gauntlets",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +100 Armor.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : Increased Defense +5.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Chance on block to heal for 14 to 23. Healing is doubled in Strongholds and Cities. (1s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Taking damage has a high chance to increase your Stamina by 1 for 30 sec, stacking up to 20 times. (3s cooldown)",
+    "c": null
+   },
+   {
+    "t": "Dropped by: Nar'gurk",
+    "c": null
+   },
+   {
+    "t": "Drop Chance: 27.40%",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "275044": {
+  "en": "Bloodsport Band",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 45",
+    "c": null
+   },
+   {
+    "t": "Binds when picked up",
+    "c": null
+   },
+   {
+    "t": "Finger",
+    "c": "q1"
+   },
+   {
+    "t": "+6 Stamina",
+    "c": null
+   },
+   {
+    "t": "Restores +5 health per 5 sec.",
+    "c": "q2"
+   },
+   {
+    "t": "Equip: +22 Attack Power.",
+    "c": "q2"
+   }
+  ],
+  "ru": "Кольцо кровавого спорта"
+ },
+ "287013": {
+  "en": "Krol'dok Warplate Legplates",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 46",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Legs · Plate",
+    "c": "q1"
+   },
+   {
+    "t": "429 Armor",
+    "c": null
+   },
+   {
+    "t": "+8 Strength",
+    "c": null
+   },
+   {
+    "t": "+19 Stamina",
+    "c": null
+   },
+   {
+    "t": "Requires Level 41",
+    "c": null
+   },
+   {
+    "t": "Equip: Increased Defense +8.",
+    "c": "q2"
+   },
+   {
+    "t": "Krol'dok Battlegear (0/5) Krol'dok Warplate Helmet",
+    "c": "q"
+   },
+   {
+    "t": "Krol'dok Warplate Pauldrons",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Chest",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Legplates",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Gauntlets",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +100 Armor.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : Increased Defense +5.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Chance on block to heal for 14 to 23. Healing is doubled in Strongholds and Cities. (1s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Taking damage has a high chance to increase your Stamina by 1 for 30 sec, stacking up to 20 times. (3s cooldown)",
+    "c": null
+   }
+  ],
+  "ru": null
+ },
+ "287014": {
+  "en": "Krol'dok Warplate Pauldrons",
+  "q": 3,
+  "lines": [
+   {
+    "t": "Item Level 46",
+    "c": null
+   },
+   {
+    "t": "Binds when equipped",
+    "c": null
+   },
+   {
+    "t": "Shoulder · Plate",
+    "c": "q1"
+   },
+   {
+    "t": "368 Armor",
+    "c": null
+   },
+   {
+    "t": "+14 Stamina",
+    "c": null
+   },
+   {
+    "t": "+50 Armor",
+    "c": null
+   },
+   {
+    "t": "Requires Level 41",
+    "c": null
+   },
+   {
+    "t": "Equip: Improves your chance to hit by 1.0%.",
+    "c": "q2"
+   },
+   {
+    "t": "Krol'dok Battlegear (0/5) Krol'dok Warplate Helmet",
+    "c": "q"
+   },
+   {
+    "t": "Krol'dok Warplate Pauldrons",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Chest",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Legplates",
+    "c": null
+   },
+   {
+    "t": "Krol'dok Warplate Gauntlets",
+    "c": null
+   },
+   {
+    "t": "(2) Set : +100 Armor.",
+    "c": "q0"
+   },
+   {
+    "t": "(3) Set : Increased Defense +5.",
+    "c": null
+   },
+   {
+    "t": "(4) Set : Chance on block to heal for 14 to 23. Healing is doubled in Strongholds and Cities. (1s cooldown)",
+    "c": null
+   },
+   {
+    "t": "(5) Set : Taking damage has a high chance to increase your Stamina by 1 for 30 sec, stacking up to 20 times. (3s cooldown)",
+    "c": null
+   }
+  ],
+  "ru": null
  }
 }
